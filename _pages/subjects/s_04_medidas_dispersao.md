@@ -73,9 +73,9 @@ Ou de forma alternativa e mais rápida:
 
 $$\mathrm{dp_s}(x) = \sigma = \sqrt{\frac{n(\sum x_i^2) - (\sum x_i)^2 }{n^2}}$$
 
-### Teorema de Chebychev
+### Teorema de Chebyshev
 
-Para qualquer conjunto de dados e qualquer valor $k > 1$, existe uma proporção de pelo menos $1 - \frac{1}{K}$ observações da variável $x$ no intervalo $\bar{x} - k \sigma$ e $\bar{x} + k \sigma$.
+Para qualquer conjunto de dados e qualquer valor $k > 1$, existe uma proporção de pelo menos $1 - \frac{1}{k^2}$ observações da variável $x$ no intervalo $\bar{x} - k \sigma$ e $\bar{x} + k \sigma$.
 
 Ou seja:
 
