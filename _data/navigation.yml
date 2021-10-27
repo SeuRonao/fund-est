@@ -1,0 +1,7 @@
+main:
+  - title: "Plano"
+    url: _pages/plan
+  - title: "Notas de Aula"
+    url: _pages/subjects
+  - title: "Exercícios"
+    url: _pages/exercises

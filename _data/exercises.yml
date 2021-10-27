@@ -1,0 +1,12 @@
+- title: "Lista de Exercícios 01"
+  order: 1
+  url: _pages/exercises/e_01_lista.md
+- title: "Lista de Exercícios 02"
+  order: 2
+  url: _pages/exercises/e_02_lista.md
+- title: "Lista de Exercícios 03"
+  order: 3
+  url: _pages/exercises/e_03_lista.md
+- title: "Lista de Exercícios 04"
+  order: 4
+  url: _pages/exercises/e_04_lista.md

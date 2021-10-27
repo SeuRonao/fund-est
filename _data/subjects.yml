@@ -1,0 +1,27 @@
+- title: "Tópico 01: Introdução geral"
+  order: 1
+  url: _pages/subjects/s_01_introducao_geral.md
+- title: "Tópico 02: Estatística Descritiva"
+  order: 2
+  url: _pages/subjects/s_02_estatistica_descritiva.md
+- title: "Tópico 03: Medidas de Tendência Central"
+  order: 3
+  url: _pages/subjects/s_03_medidas_tendencia_central.md
+- title: "Tópico 04: Medidas de Dispersão"
+  order: 4
+  url: _pages/subjects/s_04_medidas_dispersao.md
+- title: "Tópico 05: Probabilidade"
+  order: 5
+  url: _pages/subjects/s_05_probabilidade.md
+- title: "Tópico 06: Variáveis Aleatórias"
+  order: 6
+  url: _pages/subjects/s_06_variaveis_aleatorias.md
+- title: "Tópico 07: Inferência Estatística"
+  order: 7
+  url: _pages/subjects/s_07_inferencia_estatistica.md
+- title: "Tópico 08: Testes de Hipóteses"
+  order: 8
+  url: _pages/subjects/s_08_testes_hipoteses.md
+- title: "Tópico 09: Regressão Linear Simples"
+  order: 9
+  url: _pages/subjects/s_09_regressao_linear_simples.md
