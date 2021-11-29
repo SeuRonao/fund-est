@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<!-- Change masthead title here -->
+		<title>Testes de Hipóteses - Fundamentos de Estatística</title>
+		<!-- Change description here -->
+		<meta name="description" content="Uma apresentação inicial sobre testes de hipóteses para a disciplina de Fundamentos de Estatística na Universidade Federal do Ceará.">
+		<!-- Change author here -->
+		<meta name="author" content="Ronan Soares">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../reveal.js-4.2.0/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js-4.2.0/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js-4.2.0/dist/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal.js-4.2.0/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background-image="https://i2.wp.com/files.123freevectors.com/wp-content/original/149163-red-and-black-flowing-curves-background-vector-graphic.jpg?w=800&q=95" data-background-opacity="0.3">
+					<h3>Testes de Hipóteses</h3>
+					<p><small>Para a disciplina de <a href="https://seuronao.github.io/fundamentos-de-estatistica/">Fundamentos de Estatística</a> por <a href="https://seuronao.github.io/">Ronan Soares</a></small></p>
+				</section>
+				<section data-background-image="https://i2.wp.com/files.123freevectors.com/wp-content/original/149163-red-and-black-flowing-curves-background-vector-graphic.jpg?w=800&q=95" data-background-opacity="0.3">
+					<h3>Conceitos Inciais</h3>
+					<p class="fragment">Hipótese: Afirmação sobre a <span class="fragment highlight-red">população.</span></p>
+					<p class="fragment">Teste de Hipótese: Técnica para testar a afirmação.</p>
+				</section>
+				<section data-background-image="https://images.unsplash.com/photo-1529310399831-ed472b81d589?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" data-background-opacity="0.3">
+					<section data-auto-animate>
+						<h3>Hipótese</h3>
+						<p>Afirmação sobre a população.</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Hipótese</h3>
+						<p>Afirmação sobre alguma propriedade da população.</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Hipótese</h3>
+						<p>Afirmação sobre alguma propriedade da população.</p>
+						<p><em>Exemplo</em>: A temperatura corporal <span class="fragment highlight-red">média</span> do ser humano é de 37°.</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Hipótese</h3>
+						<p>Afirmação sobre alguma propriedade da população.</p>
+						<p><em>Exemplo</em>: A <span class="fragment highlight-red">proporção</span> de brasileiros que celebram festas juninas é maior que 30%.</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Hipótese</h3>
+						<p>Hipótese nula \((H_0)\): Hipótese que se quer confirmar.</p>
+						<p>Hipótese alternativa \((H_1)\): Hipótese alternativa para comparar com \(H_0\).</p>
+						<aside class="notes">
+							Utilizar o exemplo da moeda: H0 equilibrada, H1 favorece coroa.
+						</aside>
+					</section>
+				</section>
+				<section data-background-image="https://images.unsplash.com/photo-1609602644879-dd158c2b56b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" data-background-opacity="0.5">
+					<h3>Teste de Hipótese(s)</h3>
+					<p>Procedimento geral</p>
+					<ol>
+						<li class="fragment">Elaborar a(s) hipótese(s).</li>
+						<li class="fragment">Realizar o teste.</li>
+						<li class="fragment">Confirmar ou rejeitar a(s) hipótese(s).</li>
+					</ol>
+					<p class="fragment">Qual a chance de <em>errar</em>?</p>
+				</section>
+				<section data-background-image="https://i2.wp.com/files.123freevectors.com/wp-content/original/149163-red-and-black-flowing-curves-background-vector-graphic.jpg?w=800&q=95" data-background-opacity="0.3">
+					<h3>Erro</h3>
+					<ul>
+						<li>Tipo 1: A hipótese nula é <span class="fragment highlight-red " data-fragment-index="1">rejeitada</span> sendo <span class="fragment highlight-green" data-fragment-index="1">verdadeira</span>.</li>
+						<li>Tipo 2: A hipótese nula é <span class="fragment highlight-green" data-fragment-index="2">aceita</span> sendo <span class="fragment highlight-red" data-fragment-index="2">falsa</span>.</li>
+					</ul>
+				</section>
+				<section data-background-image="https://i2.wp.com/files.123freevectors.com/wp-content/original/149163-red-and-black-flowing-curves-background-vector-graphic.jpg?w=800&q=95" data-background-opacity="0.3">
+					<h3>Prioridade</h3>
+					<p>Nem todo erro tem a mesma relevância.</p>
+					<p class="fragment">Hipótese: ter uma doença.</p>
+					<p class="fragment">Tipo 1: Estar doente e o exame dar negativo.</p>
+					<p class="fragment">Tipo 2: Não estar doente e o exame dar positivo.</p>
+				</section>
+				<section data-background-image="https://images.unsplash.com/photo-1589038713484-37719951c02d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" data-background-opacity="0.2">
+					<section data-auto-animate>
+						<h3>Exemplo: Um moeda é equilibrada?</h3>
+						<ol>
+							<li class="fragment">Elaborar hipótese.</li>
+							<ul>
+								<li class="fragment">Hipótese \(H_0\): cara sai 50% das vezes.</li>
+								<li class="fragment">Hipótese \(H_1\): coroa sai com 70% das vezes.</li>
+							</ul>
+							<li class="fragment">Realizar teste.</li>
+							<ul>
+								<li class="fragment">Jogar a moeda 30 vezes e verificar a proporção de caras.</li>
+								<li class="fragment">Decidir aceitar ou rejeitar \(H_0\), como!?</li>
+								<li class="fragment">Qual a probabilidade dos erros Tipo 1 e Tipo 2?</li>
+							</ul>
+						</ol>
+					</section>
+					<section data-auto-animate>
+						<h3>Exemplo: Um moeda é equilibrada?</h3>
+						<p>\(\hat{p}\): a proporção de caras obtidas.</p>
+						<p>\(p\): a real chance de sair cara na moeda.</p>
+						<p class="fragment">Pelo <a href="https://pt.wikipedia.org/wiki/Teorema_central_do_limite">Teorema Central do Limite</a>: \[\hat{p} \sim N\left(p, \sqrt{p(1 - p)/30}\right).\]</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Exemplo: Um moeda é equilibrada?</h3>
+						<p>Pelo <a href="https://pt.wikipedia.org/wiki/Teorema_central_do_limite">Teorema Central do Limite</a>: \[\hat{p} \sim N\left(p, \sqrt{p(1-p)/30}\right).\]</p>
+						<p class="fragment">Supondo \(H_0\): \(\hat{p} \sim N\left(0.5, \sqrt{0.5 \cdot 0.5 / 30}\right).\)</p>
+						<p class="fragment">Supondo \(H_1\): \(\hat{p} \sim N\left(0.7, \sqrt{0.7 \cdot 0.3 / 30}\right).\)</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Exemplo: Um moeda é equilibrada?</h3>
+						<p>Resumindo:</p>
+						<p>Se \(H_0\) é verdadeira: \(\hat{p} \sim N\left(0.5, 0.091\right).\)</p>
+						<p>Se \(H_1\) é verdadeira: \(\hat{p} \sim N\left(0.7, 0.084\right).\)</p>
+						<p class="fragment">Vamos <em>escolher</em> 20 como ponto de corte.</p>
+						<p class="fragment">\(\hat{p} \leq 20\): aceita \(H_0\) e rejeita \(H_1\).</p>
+						<p class="fragment">\(\hat{p} > 20\): rejeita \(H_0\) e aceita \(H_1\).</p>
+						<aside class="notes">
+							Falar sobre Erro Tipo 1 e 2 aqui.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<h3>Exemplo: Um moeda é equilibrada?</h3>
+						<p>Calculando:</p>
+						<p>Se \(H_0\) é verdadeira: \(P(\hat{p} \leq 20) \approx 0.98\)</p>
+						<p>Se \(H_1\) é verdadeira: \(P(\hat{p} > 20) \approx 0.59\)</p>
+					</section>
+					<section data-auto-animate>
+						<h3>Exemplo: Um moeda é equilibrada?</h3>
+						<p>Calculando:</p>
+						<p>Se \(H_0\) é verdadeira: \(P(\hat{p} \leq 20) \approx 0.98\)</p>
+						<p class="fragment highlight-current-red">Erro Tipo 1: \(P(\hat{p} > 20) \approx 0.02\)</p>
+						<p>Se \(H_1\) é verdadeira: \(P(\hat{p} > 20) \approx 0.59\)</p>
+						<p class="fragment highlight-red">Erro Tipo 2: \(P(\hat{p} \leq 20) \approx 0.41\)</p>
+					</section>
+				</section>
+				<section data-background-image="https://i2.wp.com/files.123freevectors.com/wp-content/original/149163-red-and-black-flowing-curves-background-vector-graphic.jpg?w=800&q=95" data-background-opacity="0.3">
+					<h1>Revisão</h1>
+					<ul>
+						<li>Hipótese</li>
+						<li>Teste de Hipóteses</li>
+						<li>Erro</li>
+					</ul>
+					<p>Mais informações em <a href="https://seuronao.github.io/fundamentos-de-estatistica/">Fundamentos de Estatística</a>.</p>
+					<aside class="notes">Hipótese Nula, Alternativa, Amostra, Ponto de Corte, Erro Tipo 1, Erro Tipo 2</aside>
+				</section>
+			</div>
+		</div>
+		<script src="../reveal.js-4.2.0/dist/reveal.js"></script>
+		<script src="../reveal.js-4.2.0/plugin/zoom/zoom.js"></script>
+		<script src="../reveal.js-4.2.0/plugin/notes/notes.js"></script>
+		<script src="../reveal.js-4.2.0/plugin/search/search.js"></script>
+		<script src="../reveal.js-4.2.0/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js-4.2.0/plugin/highlight/highlight.js"></script>
+		<script src="../reveal.js-4.2.0/plugin/math/math.js"></script>
+		<script>
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.MathJax3 ]
+			});
+		</script>
+	</body>
+</html>

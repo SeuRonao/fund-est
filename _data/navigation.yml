@@ -1,0 +1,9 @@
+main:
+  - title: "Plano"
+    url: /plan/
+  - title: "Notas de Aula"
+    url: /subjects/
+  - title: "Exercícios"
+    url: /exercises/
+  - title: "Posts"
+    url: /year-archive/
