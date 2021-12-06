@@ -227,6 +227,36 @@ Em média, qual o valor do prêmio nesse jogo?
 
 Em média, qual o lucro que se obtem ao jogar esse jogo?
 
+### Resposta
+
+O espaço amostral:
+
+$$ \Omega = \\{K, CK, CCK, CCCK, \ldots, C\ldots CK \\}$$
+$$ P(K) = 1/2 $$
+$$ P(CK) = 1/4 $$
+$$ P(CCK) = 1/8 $$
+$$ P(CC\ldots CK) = 1/2^n \text{ aonde } n \text{ é o número de vezes que a moeda foi lançada.} $$
+
+Seja $x$ a v.a. que mede o prêmio ao se jogar o jogo:
+
+$$P(x = 2) = P(K) = 1/2$$
+$$P(x = 4) = P(CK) = 1/4$$
+$$P(x = 8) = P(CCK) = 1/8$$
+$$P(x = 2^n) = 1/2^n$$
+
+Seja $y$ a v.a. que mede o lucro ao se jogar o jogo.
+
+$$ y = x - 100$$
+$$ \mu_y = \mu_x - 100$$
+$$\mu_x = \sum_{i = 1}^\infty 2^i P(x = 2^i) $$
+$$\mu_x = 2^1 P(x = 2^1) + 2^2 P(x = 2^2) + 2^3 P(x = 2^3) + 2^4 P(x = 2^4) + \cdots $$
+$$\mu_x = 2^1 \frac{1}{2^1} + 2^2 \frac{1}{2^2} + 2^3 \frac{1}{2^3} + 2^4 \frac{1}{2^4} + \cdots $$
+$$\mu_x = 1 + 1 + 1 + 1 + \cdots $$
+$$\mu_x = \infty $$
+$$\mu_y = \mu_x - 100$$
+$$\mu_y = \infty - 100$$
+$$\mu_y = \infty$$
+
 ## Questão 18
 
 As empresas $A$ e $B$ produzem um tipo de lubrificante para motores.
