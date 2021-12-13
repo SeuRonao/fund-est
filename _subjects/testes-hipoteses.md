@@ -7,11 +7,3 @@ header:
 Testes de Hipóteses são técnicas que auxiliam a tomada de decisões confrontando duas hipóteses em busca de qual é a mais adequada.
 
 Uma apresentação inicial sobre o tema pode ser encontrada [aqui]({% link slides/testes-hipoteses.html %}).
-
-## Testes para médias
-
-Uma apresentação sobre o tema pode ser encontrada [aqui]({% link slides/testes-hipoteses-medias.html %}).
-
-## Testes para proporções
-
-Uma apresentação sobre o tema pode ser encontrada [aqui]({% link slides/testes-hipoteses-proporcoes.html %}).
