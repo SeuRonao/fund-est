@@ -114,7 +114,7 @@ Fazendo algumas simplificações chegamos em:
 
 $$P(\hat{p} - e \leq p \leq \hat{p} + e) = 1 - \alpha$$
 
-Ou seja, a chance de $p$ estar entre $\hat{p} - e$ e $\hat{p} + e$ contenha realmente o parâmetro $p$ é de $1 - \alpha$$.
+Ou seja, a chance de $p$ estar entre $\hat{p} - e$ e $\hat{p} + e$ contenha realmente o parâmetro $p$ é de $1 - \alpha$.
 
 Como essa distribuição é normal, podemos escolher ou o tamanho da margem de erro $e$, ou o valor de $\alpha$ mas não ambos.
 
