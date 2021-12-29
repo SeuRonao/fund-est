@@ -4,4 +4,6 @@ order: 9
 header:
   teaser: /assets/images/teasers/curves-abstract-500x300.jpg
 ---
-Em um futuro breve!
+Técnica para encontrar uma *relação* entre um variáveis *distintas*.
+
+Uma apresentação inicial pode ser encontrada [aqui]({% link slides/regressao-linear-simples.html %}).
