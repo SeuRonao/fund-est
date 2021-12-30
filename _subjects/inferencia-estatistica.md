@@ -151,7 +151,7 @@ Substituindo em valores:
 2. Calcule, baseado em $Z = N(0; 1)$ qual valor $e$ que satisfaz:
    $$P(-e \leq Z \leq e) = 1 - \alpha$$
 3. Colha a amostra $\hat{p}$ de tamanho $n$.
-4. Calcule $E = e\sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}$
+4. Calcule $E = e \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}$
 5. O intervalo de confiança: $\left[\hat{p} - E, \hat{p} + E\right]$.
 6. O nível de confiança: $1 - \alpha$.
 
@@ -193,6 +193,6 @@ $$ P\left(\bar{X} - 1.96 \frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X} + 1.96 \f
 2. Calcule, baseado em $Z = N(0; 1)$ qual valor $e$ que satisfaz:
    $$P(-e \leq Z \leq e) = 1 - \alpha$$
 3. Colha a amostra $\bar{X}$ de tamanho $n$.
-4. Fazendo $E = 1.96 \sigma/\sqrt{n}$
+4. Fazendo $E = e \sigma/\sqrt{n}$
 5. O intervalo de confiança: $\left[\bar{X} - E, \bar{X} + E\right]$.
 6. O nível de confiança: $1 - \alpha$.
