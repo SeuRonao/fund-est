@@ -186,10 +186,10 @@
                             <li class="fragment">Elaborar hipótese.</li>
                             <ul>
                                 <li class="fragment">
-                                    Hipótese \(H_0\): cara sai 50% das vezes.
+                                    Hipótese \(H_0\): cara sai no máximo 50% das vezes.
                                 </li>
                                 <li class="fragment">
-                                    Hipótese \(H_1\): coroa sai com 70% das
+                                    Hipótese \(H_1\): cara sai pelo menos 70% das
                                     vezes.
                                 </li>
                             </ul>
@@ -247,14 +247,14 @@
                             0.084\right).\)
                         </p>
                         <p class="fragment">
-                            Vamos <em>escolher</em> 20 como ponto de corte.
+                            Vamos <em>escolher</em> 20 caras em 30 como ponto de corte.
                         </p>
                         <p class="fragment">
-                            \(\hat{p} \leq 20\): aceita \(H_0\) e rejeita
+                            \(\hat{p} \leq 20/30\): aceita \(H_0\) e rejeita
                             \(H_1\).
                         </p>
                         <p class="fragment">
-                            \(\hat{p} > 20\): rejeita \(H_0\) e aceita \(H_1\).
+                            \(\hat{p} > 20/30\): rejeita \(H_0\) e aceita \(H_1\).
                         </p>
                         <aside class="notes">
                             Falar sobre Erro Tipo 1 e 2 aqui.
@@ -264,21 +264,21 @@
                         <h3>Exemplo: Um moeda é equilibrada?</h3>
                         <p>Calculando:</p>
                         <p>
-                            Se \(H_0\) é verdadeira: \(P(\hat{p} \leq 20)
+                            Se \(H_0\) é verdadeira: \(P(\hat{p} \leq 20/30)
                             \approx 0.98\)
                         </p>
                         <span class="fragment" data-fragment-index="1"
                             ><p class="fragment highlight-current-red">
-                                Erro Tipo 1: \(P(\hat{p} > 20) \approx 0.02\)
+                                Erro Tipo 1: \(P(\hat{p} > 20/30) \approx 0.02\)
                             </p></span
                         >
                         <p>
-                            Se \(H_1\) é verdadeira: \(P(\hat{p} > 20) \approx
+                            Se \(H_1\) é verdadeira: \(P(\hat{p} > 20/30) \approx
                             0.59\)
                         </p>
                         <span class="fragment" data-fragment-index="1"
                             ><p class="fragment highlight-red">
-                                Erro Tipo 2: \(P(\hat{p} \leq 20) \approx 0.41\)
+                                Erro Tipo 2: \(P(\hat{p} \leq 20/30) \approx 0.41\)
                             </p></span
                         >
                     </section>
