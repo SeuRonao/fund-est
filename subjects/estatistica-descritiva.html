@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Estatística Descritiva - Fundamentos de Estatística</title>
+<meta name="description" content="Como classificar variáveis, construir tabelas e desenhar gráficos.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+  <meta property="article:author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Estatística Descritiva">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/estatistica-descritiva">
+
+
+  <meta property="og:description" content="Como classificar variáveis, construir tabelas e desenhar gráficos.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/graphs-500x300.jpg">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Estatística Descritiva">
+  <meta name="twitter:description" content="Como classificar variáveis, construir tabelas e desenhar gráficos.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/estatistica-descritiva">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/graphs-500x300.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-07T08:40:29-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/subjects/estatistica-descritiva">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Estatística Descritiva">
+    <meta itemprop="description" content="Como classificar variáveis, construir tabelas e desenhar gráficos.">
+    <meta itemprop="datePublished" content="2022-06-07T08:40:29-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Estatística Descritiva
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li><a href="#vari%C3%A1veis">Variáveis</a></li>
+<li><a href="#dados-ou-informa%C3%A7%C3%B5es">Dados ou Informações</a></li>
+<li><a href="#agrupamento-de-valores">Agrupamento de Valores</a></li>
+<li><a href="#nomenclatura">Nomenclatura</a></li>
+<li><a href="#exemplo-pr%C3%A1tico">Exemplo Prático</a></li>
+<li>
+<a href="#gr%C3%A1ficos">Gráficos</a><ul>
+<li><a href="#histogramas">Histogramas</a></li>
+<li><a href="#dotplot-gr%C3%A1fico-de-pontos">DotPlot (gráfico de pontos)</a></li>
+<li><a href="#stemplot-ramos-e-folhas">StemPlot (ramos-e-folhas)</a></li>
+<li><a href="#time-series-s%C3%A9ries-temporais">Time Series (séries temporais)</a></li>
+<li><a href="#gr%C3%A1fico-de-pareto">Gráfico de Pareto</a></li>
+<li><a href="#gr%C3%A1fico-em-pizza">Gráfico em pizza</a></li>
+</ul>
+</li>
+<li><a href="#mal-uso-de-gr%C3%A1ficos">Mal uso de Gráficos</a></li>
+<li>
+<a href="#exemplos">Exemplos</a><ul>
+<li><a href="#testes-para-covid-19-na-argentina">Testes para COVID-19 na Argentina</a></li>
+<li><a href="#a-russia-achatou-a-curva">A Russia achatou a curva</a></li>
+</ul>
+</li>
+<li><a href="#exemplos-de-an%C3%A1lises-estat%C3%ADsticas">Exemplos de Análises Estatísticas</a></li>
+<li><a href="#fontes-de-bancos-de-dados">Fontes de Bancos de Dados</a></li>
+<li>
+<a href="#exerc%C3%ADcio-resolvido">Exercício Resolvido</a><ul>
+<li><a href="#parte-1-classificar-os-tipos-de-vari%C3%A1veis-encontradas-no-banco-de-dados">Parte 1: Classificar os tipos de variáveis encontradas no banco de dados.</a></li>
+<li><a href="#parte-2-tabelas-de-distribui%C3%A7%C3%A3o-de-frequ%C3%AAncia">Parte 2: Tabelas de Distribuição de Frequência.</a></li>
+<li><a href="#parte-3-histogramas">Parte 3: Histogramas.</a></li>
+<li><a href="#resultado-final">Resultado Final</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>Como classificar variáveis, construir tabelas e desenhar gráficos.</p>
+
+<h2 id="variáveis">Variáveis</h2>
+
+<p>Características de interesse da amostra ou população.</p>
+
+<ul>
+  <li>
+<strong>Qualitativa</strong>: aquela que define uma qualidade sem valor numérico.
+    <ul>
+      <li>
+<strong>Nominal</strong>: que não tem nenhuma relação de ordem.
+        <ul>
+          <li>Exemplos: nome, cor, doente/sadio, esportista/sedentário.</li>
+        </ul>
+      </li>
+      <li>
+<strong>Ordinal</strong>: que tem alguma relação de ordem intrínseca.
+        <ul>
+          <li>Exemplos: grau de escolaridade.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<strong>Quantitativa</strong>: aquela que define uma qualidade com valor numérico.
+    <ul>
+      <li>
+<strong>Discreta</strong>: assumem valores <em>equivalentes</em> aos números inteiros.
+        <ul>
+          <li>Exemplos: números de filhos, número de cigarros fumados por dia, número de carros.</li>
+        </ul>
+      </li>
+      <li>
+<strong>Contínua</strong>: assumem valores <em>equivalentes</em> os números reais.
+        <ul>
+          <li>Exemplos: peso, altura, pressão arterial.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="dados-ou-informações">Dados ou Informações</h2>
+
+<ul>
+  <li>
+<strong>Dados Brutos</strong>: dados populacionais obtidos sem nenhum tratamento.</li>
+  <li>
+<strong>Rol</strong>: dados organizados de forma crescente ou decrescente.</li>
+  <li>
+<strong>Tabela de Frequência</strong>: cada linha indica quantas vezes cada valor é observado.</li>
+</ul>
+
+<h2 id="agrupamento-de-valores">Agrupamento de Valores</h2>
+
+<ul>
+  <li>
+<strong>Amplitude de uma variável</strong>: diferença entre o maior e menor valor da variável.</li>
+  <li>
+<strong>Classe</strong>: um grupo de valores.</li>
+  <li>
+<strong>Limites de uma Classe</strong>: maior e menor valor da classe.</li>
+  <li>
+<strong>Regra de Sturges</strong>: se a população tem $n$ elementos, então o número de classes $k$ desejado em uma tabela é
+$$k = 1 + 3.3 \log_{10} (n).$$</li>
+</ul>
+
+<h2 id="nomenclatura">Nomenclatura</h2>
+
+<p>Em um contexto de uma tabela de distribuição de frequência e população com $n$ elementos e com rol de valores observados $x_1 &lt; x_2 &lt; x_3 &lt; \cdots &lt; x_k$:</p>
+
+<ul>
+  <li>Frequência simples absoluta ($n_i$): número de observações de um determinado valor.</li>
+  <li>Frequência simples relativa ($f_i$): proporção de observações em relação ao todo ($n_i/n$).</li>
+  <li>Frequência acumulada absoluta ($N_i$): número total de observações abaixo de um certo valor ($\sum_{j = 1}^i n_i$).</li>
+  <li>Frequência acumulada relativa ($F_i$): proporção de observações abaixo de um certo valor em relação ao todo ($\sum_{j = 1}^i f_i$).</li>
+</ul>
+
+<h2 id="exemplo-prático">Exemplo Prático</h2>
+
+<p><a href="https://www.kaggle.com/spscientist/students-performance-in-exams">Aqui</a> você pode encontrar o arquivo original para o exemplo abaixo.</p>
+
+<p>No exemplo temos uma tabela fictícia com o desempenho de algumas pessoas em testes.</p>
+
+<p>Na tabela, existem as seguintes variáveis que podem ser classificadas como:</p>
+
+<ul>
+  <li>gênero/sexo: qualitativa nominal.</li>
+  <li>raça/etnia: qualitativa nominal.</li>
+  <li>nível escolar dos pais: qualitativa ordinal.</li>
+  <li>tipo de almoço: qualitativa nominal.</li>
+  <li>curso preparatório para o teste: qualitativa nominal.</li>
+  <li>resultado no teste de matemática: quantitativa discreta.</li>
+  <li>resultado no teste de leitura: quantitativa discreta.</li>
+  <li>resultado no teste de escrita: quantitativa discreta.</li>
+</ul>
+
+<p>Abaixo podemos ver algumas tabelas de distribuição de frequência para essas variáveis.</p>
+
+<p>Distribuição de frequência do gênero/sexo:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>gênero/sexo</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>masculino</td>
+      <td>518</td>
+      <td>51.80%</td>
+    </tr>
+    <tr>
+      <td>feminino</td>
+      <td>482</td>
+      <td>48.20%</td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência da raça/etnia:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>raça/etnia</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>grupo A</td>
+      <td>89</td>
+      <td>8.90%</td>
+    </tr>
+    <tr>
+      <td>grupo B</td>
+      <td>190</td>
+      <td>19.00%</td>
+    </tr>
+    <tr>
+      <td>grupo C</td>
+      <td>319</td>
+      <td>31.90%</td>
+    </tr>
+    <tr>
+      <td>grupo D</td>
+      <td>262</td>
+      <td>26.20%</td>
+    </tr>
+    <tr>
+      <td>grupo E</td>
+      <td>140</td>
+      <td>14.00%</td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência do nível escolar dos pais:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>nível escolar paterno</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ensino fundamental incompleto</td>
+      <td>179</td>
+      <td>17.90%</td>
+    </tr>
+    <tr>
+      <td>ensino fundamental completo</td>
+      <td>196</td>
+      <td>19.60%</td>
+    </tr>
+    <tr>
+      <td>ensino técnico</td>
+      <td>222</td>
+      <td>22.20%</td>
+    </tr>
+    <tr>
+      <td>superior incompleto</td>
+      <td>226</td>
+      <td>22.60%</td>
+    </tr>
+    <tr>
+      <td>superior completo</td>
+      <td>118</td>
+      <td>11.80%</td>
+    </tr>
+    <tr>
+      <td>pós-graduação</td>
+      <td>59</td>
+      <td>5.90%</td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência do tipo de almoço:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>almoço</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reduzido</td>
+      <td>355</td>
+      <td>35.50%</td>
+    </tr>
+    <tr>
+      <td>normal</td>
+      <td>645</td>
+      <td>64.50%</td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência do curso preparatório:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>curso</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>não fez</td>
+      <td>358</td>
+      <td>35.80%</td>
+    </tr>
+    <tr>
+      <td>completou</td>
+      <td>642</td>
+      <td>64.20%</td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência do resultado do teste de matemática:</p>
+
+<p>Aqui temos um problema.
+Como são muitas notas, teremos que agrupar elas em classes senão a tabela de distribuição de frequência teria mais ou menos umas 100 linhas.
+Escolhendo 10 classes ficamos com:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>matemática</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+      <th>$N_i$</th>
+      <th>$F_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0-9</td>
+      <td>2</td>
+      <td>0.20%</td>
+      <td>2</td>
+      <td>0.20%</td>
+    </tr>
+    <tr>
+      <td>10-19</td>
+      <td>2</td>
+      <td>0.20%</td>
+      <td>4</td>
+      <td>0.40%</td>
+    </tr>
+    <tr>
+      <td>20-29</td>
+      <td>10</td>
+      <td>1.00%</td>
+      <td>14</td>
+      <td>1.40%</td>
+    </tr>
+    <tr>
+      <td>30-39</td>
+      <td>26</td>
+      <td>2.60%</td>
+      <td>40</td>
+      <td>4.00%</td>
+    </tr>
+    <tr>
+      <td>40-49</td>
+      <td>95</td>
+      <td>9.50%</td>
+      <td>135</td>
+      <td>13.50%</td>
+    </tr>
+    <tr>
+      <td>50-59</td>
+      <td>188</td>
+      <td>18.80%</td>
+      <td>323</td>
+      <td>32.30%</td>
+    </tr>
+    <tr>
+      <td>60-69</td>
+      <td>268</td>
+      <td>26.80%</td>
+      <td>591</td>
+      <td>59.10%</td>
+    </tr>
+    <tr>
+      <td>70-79</td>
+      <td>216</td>
+      <td>21.60%</td>
+      <td>807</td>
+      <td>80.70%</td>
+    </tr>
+    <tr>
+      <td>80-89</td>
+      <td>135</td>
+      <td>13.50%</td>
+      <td>942</td>
+      <td>94.20%</td>
+    </tr>
+    <tr>
+      <td>90-100</td>
+      <td>58</td>
+      <td>5.80%</td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência em classes do resultado do teste de leitura:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>leitura</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+      <th>$N_i$</th>
+      <th>$F_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17-26</td>
+      <td>5</td>
+      <td>0.50%</td>
+      <td>5</td>
+      <td>0.50%</td>
+    </tr>
+    <tr>
+      <td>27-36</td>
+      <td>10</td>
+      <td>1.00%</td>
+      <td>15</td>
+      <td>1.50%</td>
+    </tr>
+    <tr>
+      <td>37-46</td>
+      <td>51</td>
+      <td>5.10%</td>
+      <td>66</td>
+      <td>6.60%</td>
+    </tr>
+    <tr>
+      <td>47-56</td>
+      <td>126</td>
+      <td>12.60%</td>
+      <td>192</td>
+      <td>19.20%</td>
+    </tr>
+    <tr>
+      <td>57-66</td>
+      <td>227</td>
+      <td>22.70%</td>
+      <td>419</td>
+      <td>41.90%</td>
+    </tr>
+    <tr>
+      <td>67-76</td>
+      <td>262</td>
+      <td>26.20%</td>
+      <td>681</td>
+      <td>68.10%</td>
+    </tr>
+    <tr>
+      <td>77-86</td>
+      <td>206</td>
+      <td>20.60%</td>
+      <td>887</td>
+      <td>88.70%</td>
+    </tr>
+    <tr>
+      <td>87-96</td>
+      <td>88</td>
+      <td>8.80%</td>
+      <td>975</td>
+      <td>97.50%</td>
+    </tr>
+    <tr>
+      <td>97-106</td>
+      <td>25</td>
+      <td>2.50%</td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Distribuição de frequência em classes do resultado do teste de escrita:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>escrita</th>
+      <th>$n_i$</th>
+      <th>$f_i$</th>
+      <th>$N_i$</th>
+      <th>$F_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10-19</td>
+      <td>3</td>
+      <td>0.30%</td>
+      <td>3</td>
+      <td>0.30%</td>
+    </tr>
+    <tr>
+      <td>20-29</td>
+      <td>6</td>
+      <td>0.60%</td>
+      <td>9</td>
+      <td>0.90%</td>
+    </tr>
+    <tr>
+      <td>30-39</td>
+      <td>23</td>
+      <td>2.30%</td>
+      <td>32</td>
+      <td>3.20%</td>
+    </tr>
+    <tr>
+      <td>40-49</td>
+      <td>82</td>
+      <td>8.20%</td>
+      <td>114</td>
+      <td>11.40%</td>
+    </tr>
+    <tr>
+      <td>50-59</td>
+      <td>167</td>
+      <td>16.70%</td>
+      <td>281</td>
+      <td>28.10%</td>
+    </tr>
+    <tr>
+      <td>60-69</td>
+      <td>230</td>
+      <td>23.00%</td>
+      <td>511</td>
+      <td>51.10%</td>
+    </tr>
+    <tr>
+      <td>70-79</td>
+      <td>254</td>
+      <td>25.40%</td>
+      <td>765</td>
+      <td>76.50%</td>
+    </tr>
+    <tr>
+      <td>80-89</td>
+      <td>157</td>
+      <td>15.70%</td>
+      <td>922</td>
+      <td>92.20%</td>
+    </tr>
+    <tr>
+      <td>90-100</td>
+      <td>78</td>
+      <td>7.80%</td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td>1000</td>
+      <td>100.00%</td>
+      <td>1000</td>
+      <td>100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="gráficos">Gráficos</h2>
+
+<p>São <em>desenhos</em> que visam transmitir informações.</p>
+
+<h3 id="histogramas">Histogramas</h3>
+
+<p>Gráfico em barras em que o eixo horizontal representa as classes da variável analisada e o eixo vertical a quantidade de observações.</p>
+
+<figure class="">
+  <img src="/fundamentos-de-estatistica/assets/images/subjects/histograma-notas-matematica.png" alt="Figura de Histograma"><figcaption>
+      Histograma da notas de matemática agrupadas em classes
+
+    </figcaption></figure>
+
+<h3 id="dotplot-gráfico-de-pontos">DotPlot (gráfico de pontos)</h3>
+
+<p>Gráfico que mostra a distribuição de frequência de variáveis <em>quantitativas</em> por meio de pontos.</p>
+
+<figure class="">
+  <img src="https://www.mathsisfun.com/data/images/dot-plot-b.svg" alt="Figura de DotPlot"></figure>
+
+<h3 id="stemplot-ramos-e-folhas">StemPlot (ramos-e-folhas)</h3>
+
+<p>Gráfico que mostra a distribuição de frequência de variáveis <em>quantitativas</em> por meio de categorias.</p>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Stem_and_leaf.png" alt="Figura de StemPlot"></figure>
+
+<h3 id="time-series-séries-temporais">Time Series (séries temporais)</h3>
+
+<p>Gráfico que mostra a evolução de uma variável ao longo do tempo.</p>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/U.S._nuclear_stokpile_since_1962.jpg" alt="Figura de Série Temporal"></figure>
+
+<h3 id="gráfico-de-pareto">Gráfico de Pareto</h3>
+
+<p>Um histograma em que as classes da variável estão dispostas em ordem decrescente de observações.</p>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Pareto_analysis.svg" alt="Gráfico de Pareto"></figure>
+
+<h3 id="gráfico-em-pizza">Gráfico em pizza</h3>
+
+<p>Gráfico em formato circular em que o tamanho de um arco reflete a quantidade de observações <em>relativa</em>.</p>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Edit_pie_chart.jpg" alt="Gráfico em Pizza"></figure>
+
+<h2 id="mal-uso-de-gráficos">Mal uso de Gráficos</h2>
+
+<p>Usados fora de escala, ou com escala <em>quebrada</em>, podem levar à uma interpretação errada dos dados.</p>
+
+<h2 id="exemplos">Exemplos</h2>
+
+<p>Os exemplos abaixo podem ser encontrados <a href="https://towardsdatascience.com/stopping-covid-19-with-misleading-graphs-6812a61a57c9">aqui</a>.</p>
+
+<h3 id="testes-para-covid-19-na-argentina">Testes para COVID-19 na Argentina</h3>
+
+<figure class="">
+  <img src="https://miro.medium.com/max/2400/1*uI-z9s9_URfjzpQc3FCDxw.png" alt="Testes de Covid na Argentina"><figcaption>
+      Gráfico da C5N sobre testes de COVID na Argentina
+
+    </figcaption></figure>
+
+<figure class="">
+  <img src="https://miro.medium.com/max/614/1*2XZ667k6b_haq-jrHb58HQ.png" alt="Gráfico Corrigido"><figcaption>
+      Gráfico Correto
+
+    </figcaption></figure>
+
+<h3 id="a-russia-achatou-a-curva">A Russia achatou a curva</h3>
+
+<figure class="">
+  <img src="https://miro.medium.com/max/700/1*uRNRV9aT2v9fhQeyFQHSJQ.jpeg" alt="Gráfico Corrigido"><figcaption>
+      Gráfico Russo
+
+    </figcaption></figure>
+
+<figure class="">
+  <img src="https://miro.medium.com/max/700/1*jeAK5sj1W4Oy6UErBl3TIA.png" alt="Gráfico Corrigido"><figcaption>
+      Gráfico Correto
+
+    </figcaption></figure>
+
+<h2 id="exemplos-de-análises-estatísticas">Exemplos de Análises Estatísticas</h2>
+
+<ul>
+  <li><a href="https://paineis.ufc.br/">Painéis Estratégicos da UFC</a></li>
+</ul>
+
+<h2 id="fontes-de-bancos-de-dados">Fontes de Bancos de Dados</h2>
+
+<p>Um bom lugar para encontrar bancos de dados públicos é o site <a href="https://www.kaggle.com/datasets">Kaggle</a>.</p>
+
+<h2 id="exercício-resolvido">Exercício Resolvido</h2>
+
+<p>Vamos analisar a <a href="https://www.kaggle.com/meetnagadia/drinking-water-quality-distributionmonitoring">Qualidade da Água Potável disponível no Kaggle</a>.</p>
+
+<p>Como o arquivo no Kaggle tem alguns problemas para importar os dados para análise, eu limpei esse arquivo e coloquei uma versão aqui: <a href="/fundamentos-de-estatistica/assets/examples/drinking_water_utf8.csv">Qualidade da Água</a> para importação.</p>
+
+<p>O primeiro passo é abrir um arquivo com um editor de sua preferência e importar os dados <em>csv</em>.
+As configurações do arquivo aqui do site são:</p>
+
+<ul>
+  <li>delimitador: <em>,</em> (vírgula).</li>
+  <li>formato/codificação: <em>utf-8</em>.</li>
+  <li>separador de texto: <em>”</em> (aspas duplas).</li>
+</ul>
+
+<p>Um arquivo com os valores já importados no formato do open office também pode ser encontrado <a href="/fundamentos-de-estatistica/assets/examples/drinking_water_utf8.ods">aqui</a>.</p>
+
+<h3 id="parte-1-classificar-os-tipos-de-variáveis-encontradas-no-banco-de-dados">Parte 1: Classificar os tipos de variáveis encontradas no banco de dados.</h3>
+
+<p>Variaveis encontradas:</p>
+
+<ul>
+  <li>
+<strong>Sample Date/Data da amostra</strong>: Qualitativa ordinal.</li>
+  <li>
+<strong>Sample Time/Horário da amostra</strong>: Qualitativa ordinal.</li>
+  <li>
+<strong>Sample Site/Local da Amostra</strong>: Qualitativa nominal.</li>
+  <li>
+<strong>Sample class/Classe da Amostra</strong>: Qualitativa nominal.</li>
+  <li>
+<strong>Location/Localização</strong>:Qualitativa nominal.</li>
+  <li>
+<strong>Residual Free Chlorine (mg/L)/Cloro residual</strong>: Quantitativa contínua.</li>
+  <li>
+<strong>Turbidity (NTU)/Turvação</strong>: Quantitativa contínua.</li>
+  <li>
+<strong>Fluoride (mg/L)/Fluoreto</strong>: Quantitativa contínua.</li>
+  <li>
+<strong>Coliform (Quanti-Tray) (MPN /100mL)/Coliformes</strong>: Quantitativa contínua.</li>
+  <li>
+<strong>E.coli(Quanti-Tray) (MPN/100mL)</strong>: Quantitativa contínua.</li>
+</ul>
+
+<h3 id="parte-2-tabelas-de-distribuição-de-frequência">Parte 2: Tabelas de Distribuição de Frequência.</h3>
+
+<p>Fazer as tabelas de distribuição de frequência de algumas das variáveis agrupando os valores quando fizer sentido.</p>
+
+<h3 id="parte-3-histogramas">Parte 3: Histogramas.</h3>
+
+<p>Construir os histogramas dessas mesmas variáveis.</p>
+
+<h3 id="resultado-final">Resultado Final</h3>
+
+<p>Um arquivo exemplo com tabelas e histogramas pode ser encontrado <a href="/fundamentos-de-estatistica/assets/examples/drinking_water_utf8_final.ods">aqui</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2022-06-07T08:40:29-03:00">June 7, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Estat%C3%ADstica+Descritiva%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Festatistica-descritiva" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Festatistica-descritiva" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Festatistica-descritiva" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/fundamentos-de-estatistica/subjects/introducao-geral" class="pagination--pager" title="Introdução Geral
+">Anterior</a>
+    
+    
+      <a href="/fundamentos-de-estatistica/subjects/medidas-tendencia-central" class="pagination--pager" title="Medidas de Tendência Central
+">Próxima</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

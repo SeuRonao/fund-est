@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://seuronao.github.io/fundamentos-de-estatistica/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seuronao.github.io/fundamentos-de-estatistica/" rel="alternate" type="text/html" /><updated>2022-06-07T08:40:29-03:00</updated><id>https://seuronao.github.io/fundamentos-de-estatistica/feed.xml</id><title type="html">Fundamentos de Estatística</title><subtitle>Um website de apoio ao ensino de Fundamentos de Estatística.</subtitle><author><name>Ronan Soares</name><email>ronan.soares@ufc.br</email></author><entry><title type="html">Como Usar o Google Classroom</title><link href="https://seuronao.github.io/fundamentos-de-estatistica/tutoriais/como-usar-google-classroom/" rel="alternate" type="text/html" title="Como Usar o Google Classroom" /><published>2021-10-28T10:00:00-03:00</published><updated>2021-10-28T10:00:00-03:00</updated><id>https://seuronao.github.io/fundamentos-de-estatistica/tutoriais/como-usar-google-classroom</id><content type="html" xml:base="https://seuronao.github.io/fundamentos-de-estatistica/tutoriais/como-usar-google-classroom/">&lt;p&gt;Para visualizar a turma do Google Classroom você deve primeiramente entrar no &lt;a href=&quot;https://si3.ufc.br/&quot;&gt;SIGAA&lt;/a&gt; e entrar na página da disciplina.&lt;/p&gt;
+
+&lt;p&gt;Procure pelo seguinte menu na tela principal da disciplina:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/como-usar-google-classroom/como-usar-google-classroom-01.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Possivelmente, aparecerá você verá a seguinte imagem:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/como-usar-google-classroom/como-usar-google-classroom-02.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Escolha a sua conta institucional clicando na seta para baixo no menu.
+Caso você não veja a conta com final &lt;strong&gt;@alu.ufc.br&lt;/strong&gt; clique em &lt;em&gt;entrar com outra conta&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/como-usar-google-classroom/como-usar-google-classroom-03.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Caso apareca a tela com todas as disciplinas que estão atreladas à sua conta institucional:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/como-usar-google-classroom/como-usar-google-classroom-04.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Na tela seguinte você encontra as informações sobre as avaliações/atividades pendentes:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/como-usar-google-classroom/como-usar-google-classroom-05.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ao clicar você verá o formulário para responder.&lt;/p&gt;</content><author><name>Ronan Soares</name><email>ronan.soares@ufc.br</email></author><category term="tutoriais" /><summary type="html">Tutorial sobre como utilizar o Google Classroom.</summary></entry><entry><title type="html">Ponto Facultativo.</title><link href="https://seuronao.github.io/fundamentos-de-estatistica/cronograma/ponto-facultativo/" rel="alternate" type="text/html" title="Ponto Facultativo." /><published>2021-10-27T19:00:00-03:00</published><updated>2021-10-27T19:00:00-03:00</updated><id>https://seuronao.github.io/fundamentos-de-estatistica/cronograma/ponto-facultativo</id><content type="html" xml:base="https://seuronao.github.io/fundamentos-de-estatistica/cronograma/ponto-facultativo/">&lt;p&gt;Como consta na &lt;a href=&quot;https://www.in.gov.br/en/web/dou/-/portaria-n-430-de-30-de-dezembro-de-2020-297214729&quot;&gt;Portaria 430&lt;/a&gt; do Ministério da Economia, o dia 01/11/2021 é ponto facultativo.
+Portanto, não teremos gravação, nem encontro síncrono na data mencionada.&lt;/p&gt;</content><author><name>Ronan Soares</name><email>ronan.soares@ufc.br</email></author><category term="cronograma" /><summary type="html">Como consta na Portaria 430 do Ministério da Economia, o dia 01/11/2021 é ponto facultativo. Portanto, não teremos gravação, nem encontro síncrono na data mencionada.</summary></entry><entry><title type="html">Recebendo Notícias com RSS feed.</title><link href="https://seuronao.github.io/fundamentos-de-estatistica/tutorial/recebendo-not%C3%ADcias-com-rss-feed/" rel="alternate" type="text/html" title="Recebendo Notícias com RSS feed." /><published>2021-10-27T09:00:00-03:00</published><updated>2021-11-19T11:38:00-03:00</updated><id>https://seuronao.github.io/fundamentos-de-estatistica/tutorial/recebendo-not%C3%ADcias-com-rss-feed</id><content type="html" xml:base="https://seuronao.github.io/fundamentos-de-estatistica/tutorial/recebendo-not%C3%ADcias-com-rss-feed/">&lt;p&gt;Para receber notificações de notícias novas no site sem ter que ficar verificando é suficiente instalar um leitor de &lt;a href=&quot;https://pt.wikipedia.org/wiki/RSS&quot;&gt;RSS feed&lt;/a&gt; no &lt;a href=&quot;#leitor-de-rss-via-navegador&quot;&gt;navegador&lt;/a&gt;, ou um &lt;a href=&quot;#leitor-via-app-de-celular-android&quot;&gt;app&lt;/a&gt; no celular.&lt;/p&gt;
+
+&lt;h2 id=&quot;leitor-de-rss-via-navegador&quot;&gt;Leitor de RSS via navegador&lt;/h2&gt;
+
+&lt;p&gt;Uma solução gratuita é o &lt;a href=&quot;https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp?hl=en&quot;&gt;RSS feed reader&lt;/a&gt; para o &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;Chrome&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Comece instalando a extensão:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-01.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pode pular a tela de login se não quiser criar uma conta:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-02.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Depois disso, siga as instruções na tela até terminar a instalação.&lt;/p&gt;
+
+&lt;p&gt;A tela inicial do &lt;em&gt;RSS feed&lt;/em&gt; é essa:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-03.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para adicionar o site da disciplina procure essa caixa de texto e escreva o endereço do site desejado:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-04.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;No caso ele é:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://seuronao.github.io/fundamentos-de-estatistica/&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Depois de clicar me procurar deve aparecer o nome do site para você seguir:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-05.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Escolha a periodicidade em que o navegador deve verificar se existem notícias novas no site:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-06.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pronto, quando novas notícias forem cadastradas deve aparecer uma notificação no ícone da extensão no canto direito superior do navegador.&lt;/p&gt;
+
+&lt;h2 id=&quot;leitor-via-app-de-celular-android&quot;&gt;Leitor via APP de celular (Android)&lt;/h2&gt;
+
+&lt;p&gt;Entre na &lt;a href=&quot;https://play.google.com/&quot;&gt;Play Store&lt;/a&gt; e procure pelo &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.frju.flym&amp;amp;hl=en&amp;amp;gl=US&quot;&gt;Flym News Reader&lt;/a&gt; escolhido para o tutorial por ser open source e gratuito.&lt;/p&gt;
+
+&lt;p&gt;Instale ele no celular.&lt;/p&gt;
+
+&lt;p&gt;A tela inicial é essa:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-07.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para adicionar aperte no lugar indicado pela seta:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-08.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Coloque o seguinte endereço na pesquisa:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://seuronao.github.io/fundamentos-de-estatistica/feed.xml&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Adicione apertando no sinal de adicionar:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-09.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;A tela inicial do &lt;em&gt;app&lt;/em&gt; deve ficar assim:&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/fundamentos-de-estatistica/assets/images/posts/recebendo-not%C3%ADcias-com-rss-feed/recebendo-not%C3%ADcias-com-rss-feed-10.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;</content><author><name>Ronan Soares</name><email>ronan.soares@ufc.br</email></author><category term="tutorial" /><summary type="html">Tutorial sobre como usar o RSS feed para receber notícias do site.</summary></entry><entry><title type="html">Site com cara nova!</title><link href="https://seuronao.github.io/fundamentos-de-estatistica/site/site-com-cara-nova/" rel="alternate" type="text/html" title="Site com cara nova!" /><published>2021-10-26T21:06:00-03:00</published><updated>2021-10-26T21:06:00-03:00</updated><id>https://seuronao.github.io/fundamentos-de-estatistica/site/site-com-cara-nova</id><content type="html" xml:base="https://seuronao.github.io/fundamentos-de-estatistica/site/site-com-cara-nova/">&lt;p&gt;O site foi atualizado para ficar mais fácil, no futuro, de adicionar conteúdos e notícias como também para ficar mais fácil acompanhar as atualizações.&lt;/p&gt;</content><author><name>Ronan Soares</name><email>ronan.soares@ufc.br</email></author><category term="site" /><summary type="html">O site foi atualizado para ficar mais fácil, no futuro, de adicionar conteúdos e notícias como também para ficar mais fácil acompanhar as atualizações.</summary></entry></feed>

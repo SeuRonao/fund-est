@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Probabilidade e Variáveis Aleatórias - Fundamentos de Estatística</title>
+<meta name="description" content="Exercícios sobre Probabilidade e Variáveis Aleatórias.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+  <meta property="article:author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Probabilidade e Variáveis Aleatórias">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/exercises/probabilidade-variaveis-aleatorias">
+
+
+  <meta property="og:description" content="Exercícios sobre Probabilidade e Variáveis Aleatórias.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/rpg-dice-500x300.jpg">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Probabilidade e Variáveis Aleatórias">
+  <meta name="twitter:description" content="Exercícios sobre Probabilidade e Variáveis Aleatórias.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/exercises/probabilidade-variaveis-aleatorias">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/rpg-dice-500x300.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-07T08:40:29-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/exercises/probabilidade-variaveis-aleatorias">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Probabilidade e Variáveis Aleatórias">
+    <meta itemprop="description" content="Exercícios sobre Probabilidade e Variáveis Aleatórias.">
+    <meta itemprop="datePublished" content="2022-06-07T08:40:29-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Probabilidade e Variáveis Aleatórias
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li><a href="#tabela-1-acidentes-de-tr%C3%A2nsito">Tabela 1: Acidentes de Trânsito</a></li>
+<li><a href="#quest%C3%A3o-1">Questão 1</a></li>
+<li><a href="#quest%C3%A3o-2">Questão 2</a></li>
+<li><a href="#quest%C3%A3o-3">Questão 3</a></li>
+<li><a href="#quest%C3%A3o-4">Questão 4</a></li>
+<li><a href="#quest%C3%A3o-5">Questão 5</a></li>
+<li><a href="#quest%C3%A3o-6">Questão 6</a></li>
+<li><a href="#quest%C3%A3o-7">Questão 7</a></li>
+<li><a href="#quest%C3%A3o-8">Questão 8</a></li>
+<li><a href="#quest%C3%A3o-9">Questão 9</a></li>
+<li><a href="#quest%C3%A3o-10">Questão 10</a></li>
+<li><a href="#quest%C3%A3o-11">Questão 11</a></li>
+<li><a href="#quest%C3%A3o-12">Questão 12</a></li>
+<li><a href="#quest%C3%A3o-13">Questão 13</a></li>
+<li><a href="#quest%C3%A3o-14">Questão 14</a></li>
+<li><a href="#quest%C3%A3o-15">Questão 15</a></li>
+<li><a href="#quest%C3%A3o-16">Questão 16</a></li>
+<li><a href="#quest%C3%A3o-17">Questão 17</a></li>
+<li><a href="#quest%C3%A3o-18">Questão 18</a></li>
+<li><a href="#quest%C3%A3o-19">Questão 19</a></li>
+<li><a href="#quest%C3%A3o-20">Questão 20</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>Exercícios sobre Probabilidade e Variáveis Aleatórias.</p>
+
+<p>As respostas da lista podem ser encontradas <a href="/fundamentos-de-estatistica/assets/answers/probabilidade-variaveis-aleatorias/">aqui</a>.</p>
+
+<h2 id="tabela-1-acidentes-de-trânsito">Tabela 1: Acidentes de Trânsito</h2>
+
+<p>Para os exercícios a seguir utilize a seguinte tabela a respeito do uso de cinto de segurança em acidentes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cinto/Acidente</th>
+      <th>Letais</th>
+      <th>Não Letais</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Com</td>
+      <td>3655</td>
+      <td>7005</td>
+    </tr>
+    <tr>
+      <td>Sem</td>
+      <td>4402</td>
+      <td>3040</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="questão-1">Questão 1</h2>
+
+<p>Se um motorista é selecionado ao acaso, qual a probabilidade dele estar usando o cinto de segurança?</p>
+
+<h2 id="questão-2">Questão 2</h2>
+
+<p>Selecionando aleatoriamente, qual a probabilidade de escolher um motorista que não sofreu um acidente letal sabendo que ele usava cinto de segurança?</p>
+
+<h2 id="questão-3">Questão 3</h2>
+
+<p>Qual a probabilidade de escolher um motorista que sofreu um acidente letal sabendo que ele não usava cinto de segurança?</p>
+
+<h2 id="questão-4">Questão 4</h2>
+
+<p>Qual a probabilidade de selecionar aleatoriamente um motorista que usa cinto ou não sofreu acidente letal?</p>
+
+<h2 id="questão-5">Questão 5</h2>
+
+<p>Qual a probabilidade de selecionar aleatoriamente um motorista que não usava cinto ou não sofreu acidente letal?</p>
+
+<h2 id="questão-6">Questão 6</h2>
+
+<p>Se dois motoristas são selecionados aleatoriamente sem reposição, qual a chance de ambos usarem cinto de segurança?</p>
+
+<h2 id="questão-7">Questão 7</h2>
+
+<p>Se dois motoristas são selecionados aleatoriamente com reposição, qual a chance dos dois terem sofrido um acidente letal?</p>
+
+<h2 id="questão-8">Questão 8</h2>
+
+<p>Se $A$ é o evento em que um motorista selecionado aleatoriamente estava usando cinto de segurança.
+Qual o significado de $A’$?
+Qual o valor de $P(A’)$?</p>
+
+<h2 id="questão-9">Questão 9</h2>
+
+<p>Se $A$ é o evento em que um motorista selecionado aleatoriamente não sofreu acidente letal.
+Qual o significado de $A’$?
+Qual o valor de $P(A’)$?</p>
+
+<h2 id="questão-10">Questão 10</h2>
+
+<p>Se 3 motoristas são selecionados aleatoriamente sem reposição, qual a probabilidade de nenhum ter sofrido um acidente letal?</p>
+
+<h2 id="questão-11">Questão 11</h2>
+
+<p>Qual a probabilidade de ganhar o maior prêmio da mega-sena com um jogo só de 6 números?</p>
+
+<h2 id="questão-12">Questão 12</h2>
+
+<p>Considerando um jogo de Pôquer Texas Hold’em.</p>
+
+<ol>
+  <li>Qual a probabilidade de ter em suas mãos duas cartas do mesmo naipe?</li>
+  <li>Qual a probabilidade de ter em suas mãos um par de ases?</li>
+  <li>Qual a probabilidade de ter em suas mãos um par qualquer?</li>
+  <li>Qual a probabilidade de ter em suas mãos um par de ases, sabendo que uma das cartas é um ás?</li>
+  <li>Qual a probabilidade de ter duas cartas do mesmo naipe em sequência?</li>
+  <li>Qual a probabilidade de ter duas cartas em sequência?</li>
+  <li>Qual a probabilidade de completar um trio qualquer, sabendo que na sua mão já tem um par de cartas?</li>
+</ol>
+
+<h2 id="questão-13">Questão 13</h2>
+
+<p>Sendo $x$ uma v.a. discreta que conta a soma dos lados do lançamento de dois dados de seis lados.</p>
+
+<p>Qual o valor médio de $x$?</p>
+
+<h2 id="questão-14">Questão 14</h2>
+
+<p>Sendo $x$ uma v.a. discreta que conta a soma dos lados do lançamento de $n$ dados de seis lados.</p>
+
+<p>Qual o valor médio de $x$?</p>
+
+<h2 id="questão-15">Questão 15</h2>
+
+<p>Em um jogo de RPG, um personagem tem a opção de utilizar um martelo que causa dois dados de seis lados de dano em um inimigo ou utilizar um machado de guerra que causa um dado de 12 lados de dano no inimigo.
+Assumindo que seria melhor escolher a arma que causa mais dano, qual seria essa escolha?</p>
+
+<h2 id="questão-16">Questão 16</h2>
+
+<p>Suponha que você consegue acertar uma cesta de basquete de 3 pontos com probabilidade 1%, em média quantas tentativas tem que ser feitas até que você acerte a primeira cesta?</p>
+
+<h2 id="questão-17">Questão 17</h2>
+
+<p>Considere o jogo do <a href="https://en.wikipedia.org/wiki/St._Petersburg_paradox">São Petersburgo</a>.
+Nele uma moeda é jogada até que saia cara.</p>
+
+<p>Para jogar o jogo um valor de R\$100.00 deve ser pago e o prêmio recebido é de $2^n$ aonde $n$ é o número de vezes que a moeda é jogada.</p>
+
+<p>Em média, qual o valor do prêmio nesse jogo?</p>
+
+<p>Em média, qual o lucro que se obtem ao jogar esse jogo?</p>
+
+<h2 id="questão-18">Questão 18</h2>
+
+<p>As empresas $A$ e $B$ produzem um tipo de lubrificante para motores.
+Segundo a empresa $A$ o tempo de vida útil em horas de funcionamento do seu lubrificante segue distribuição normal com média 1000 e desvio padrão 200.
+Já o da empresa $B$ segue distribuição normal com média 800 e desvio padrão 400.
+Em um depósito de lubrificantes existem 500 lubrificantes da empresa $A$ e 300 da empresa $B$.</p>
+
+<ol>
+  <li>Qual a chance de um lubrificante selecionado ao acaso funcionar corretamente pelo menos 1000 horas, sabendo que ele veio da empresa $A$?</li>
+  <li>Qual a chance de um lubrificante selecionado ao acaso funcionar corretamente pelo menos 1000 horas, sabendo que ele veio da empresa $B$?</li>
+  <li>Qual a chance de um lubrificante selecionado ao acaso funcionar corretamente pelo menos 1200 horas, sabendo que ele veio da empresa $A$?</li>
+  <li>Qual a chance de um lubrificante selecionado ao acaso funcionar corretamente pelo menos 1200 horas, sabendo que ele veio da empresa $B$?</li>
+  <li>Qual a chance de um lubrificante selecionado ao acaso funcionar corretamente pelo menos 1000 horas?</li>
+  <li>Qual a chance de um lubrificante selecionado ao acaso funcionar corretamente pelo menos 1200 horas?</li>
+</ol>
+
+<h2 id="questão-19">Questão 19</h2>
+
+<p>Uma moeda é jogada ao acaso 100 vezes, qual a probabilidade dela cair cara em pelo menos 70% dessas vezes?</p>
+
+<h2 id="questão-20">Questão 20</h2>
+
+<p>Um oráculo disse que 35% das pessoas apoiam um projeto de lei.
+Assumindo que a afirmação anterior é verdadeira, responda.</p>
+
+<ol>
+  <li>Selecionando aleatoriamente 200 pessoas, qual a chance de pelo menos 70 aprovarem o projeto de lei?</li>
+  <li>Selecionando aleatoriamente 200 pessoas, qual a chance de no máximo 70 aprovarem o projeto de lei?</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2022-06-07T08:40:29-03:00">June 7, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Probabilidade+e+Vari%C3%A1veis+Aleat%C3%B3rias%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fexercises%2Fprobabilidade-variaveis-aleatorias" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fexercises%2Fprobabilidade-variaveis-aleatorias" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fexercises%2Fprobabilidade-variaveis-aleatorias" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/fundamentos-de-estatistica/exercises/estatistica-descritiva" class="pagination--pager" title="Estatística Descritiva
+">Anterior</a>
+    
+    
+      <a href="/fundamentos-de-estatistica/exercises/inferencia" class="pagination--pager" title="Inferência Estatística
+">Próxima</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

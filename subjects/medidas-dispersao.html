@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Medidas de Dispersão - Fundamentos de Estatística</title>
+<meta name="description" content="São medidas que tentam resumir, em apenas um número, a variabilidade do conjunto de dados analisados.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+  <meta property="article:author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Medidas de Dispersão">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/medidas-dispersao">
+
+
+  <meta property="og:description" content="São medidas que tentam resumir, em apenas um número, a variabilidade do conjunto de dados analisados.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/cylinder-numbers-500x300.jpg">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Medidas de Dispersão">
+  <meta name="twitter:description" content="São medidas que tentam resumir, em apenas um número, a variabilidade do conjunto de dados analisados.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/medidas-dispersao">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/cylinder-numbers-500x300.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-07T08:40:29-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/subjects/medidas-dispersao">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Medidas de Dispersão">
+    <meta itemprop="description" content="São medidas que tentam resumir, em apenas um número, a variabilidade do conjunto de dados analisados.">
+    <meta itemprop="datePublished" content="2022-06-07T08:40:29-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Medidas de Dispersão
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li><a href="#amplitude">Amplitude</a></li>
+<li><a href="#desvios">Desvio(s)</a></li>
+<li><a href="#desvio-m%C3%A9dioabsoluto">Desvio médio/absoluto</a></li>
+<li>
+<a href="#vari%C3%A2ncia">Variância</a><ul>
+<li><a href="#amostras">Amostras</a></li>
+<li><a href="#popula%C3%A7%C3%A3o">População</a></li>
+</ul>
+</li>
+<li>
+<a href="#desvio-padr%C3%A3o">Desvio padrão</a><ul>
+<li><a href="#amostras-1">Amostras</a></li>
+<li><a href="#popula%C3%A7%C3%A3o-1">População</a></li>
+<li><a href="#teorema-de-chebyshev">Teorema de Chebyshev</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>São medidas que tentam resumir, em apenas um número, a variabilidade do conjunto de dados analisados.</p>
+
+<p>Para simplificar a notação, todo somatório na forma $\sum_{i = 1}^n$ será escrito como $\sum$ quando o contexto dos itens a serem somados ficar claro.</p>
+
+<h2 id="amplitude">Amplitude</h2>
+
+<p>É o maior valor menos o menor valor observado.</p>
+
+<h2 id="desvios">Desvio(s)</h2>
+
+<p>O desvio de uma observação $x_i$ da variável $x$ é dado por:</p>
+
+<p>$$d_i = x_i - \bar{x}$$</p>
+
+<p>Ele representa quanto essa observação se <em>desvia</em> da média dessa variável.</p>
+
+<h2 id="desvio-médioabsoluto">Desvio médio/absoluto</h2>
+
+<p>O desvio médio ou absoluto de uma variável $x$ pode ser calculado pela seguinte fórmula:</p>
+
+<p>$$\mathrm{dm}(x) = \frac{\sum \lvert x_i - \bar{x} \rvert}{n} = \frac{\sum \lvert d_i \rvert}{n}$$</p>
+
+<p>É a média de todos os desvios observados.</p>
+
+<h2 id="variância">Variância</h2>
+
+<p>Existem duas fórmulas para a variância de uma variável.</p>
+
+<p>Uma para amostras de uma população, outra para a própria população.</p>
+
+<h3 id="amostras">Amostras</h3>
+
+<p>A variância para <em>amostras</em> de uma variável $x$, $s^2$ ou $\mathrm{var_s}(x)$, pode ser calculada por:</p>
+
+<p>$$\mathrm{var_s}(x) = s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1} = \frac{\sum d_i^2}{n-1}$$</p>
+
+<h3 id="população">População</h3>
+
+<p>A variância para <em>populações</em> de uma variável $x$, $\sigma^2$ ou $\mathrm{var_p}(x)$, pode ser calculada por:</p>
+
+<p>$$\mathrm{var_p}(x) = \sigma^2 = \frac{\sum (x_i - \bar{x})^2}{n} = \frac{\sum d_i^2}{n}$$</p>
+
+<h2 id="desvio-padrão">Desvio padrão</h2>
+
+<p>O desvio padrão é a raiz quadrada da variancia.</p>
+
+<p>Existem duas fórmulas para o desvio padrão de uma variável.</p>
+
+<p>Uma para amostras de uma população, outra para a própria população.</p>
+
+<h3 id="amostras-1">Amostras</h3>
+
+<p>O desvio padrão para amostras de uma variável $x$, $s$ ou $\mathrm{dp_s}(x)$, pode ser calculado por:</p>
+
+<p>$$\mathrm{dp_s}(x) = s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n-1}}$$</p>
+
+<p>Ou de forma alternativa e mais rápida:</p>
+
+<p>$$\mathrm{dp_s}(x) = s = \sqrt{\frac{n(\sum x_i^2) - (\sum x_i)^2}{n(n-1)}}$$</p>
+
+<h3 id="população-1">População</h3>
+
+<p>O desvio padrão para a população de uma variável $x$, $\sigma$ ou $\mathrm{dp_p}(x)$, pode ser calculado por:</p>
+
+<p>$$\mathrm{dp_p}(x) = \sigma = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n}}$$</p>
+
+<p>Ou de forma alternativa e mais rápida:</p>
+
+<p>$$\mathrm{dp_s}(x) = \sigma = \sqrt{\frac{n(\sum x_i^2) - (\sum x_i)^2 }{n^2}}$$</p>
+
+<h3 id="teorema-de-chebyshev">Teorema de Chebyshev</h3>
+
+<p>Para qualquer conjunto de dados e qualquer valor $k &gt; 1$, existe uma proporção de pelo menos $1 - \frac{1}{k^2}$ observações da variável $x$ no intervalo $\bar{x} - k \sigma$ e $\bar{x} + k \sigma$.</p>
+
+<p>Ou seja:</p>
+
+<ul>
+  <li>pelo menos $75\%$ dos valores observados estão entre $\bar{x} - 2\sigma$ e $\bar{x} + 2\sigma$</li>
+  <li>pelo menos $89\%$ dos valores observados estão entre $\bar{x} - 3\sigma$ e $\bar{x} + 3\sigma$.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2022-06-07T08:40:29-03:00">June 7, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Medidas+de+Dispers%C3%A3o%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fmedidas-dispersao" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fmedidas-dispersao" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fmedidas-dispersao" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/fundamentos-de-estatistica/subjects/medidas-tendencia-central" class="pagination--pager" title="Medidas de Tendência Central
+">Anterior</a>
+    
+    
+      <a href="/fundamentos-de-estatistica/subjects/probabilidade" class="pagination--pager" title="Probabilidade
+">Próxima</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

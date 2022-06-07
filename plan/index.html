@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Plano de Ensino - Fundamentos de Estatística</title>
+<meta name="description" content="Um website de apoio ao ensino de Fundamentos de Estatística.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Plano de Ensino">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/plan/">
+
+
+  <meta property="og:description" content="Um website de apoio ao ensino de Fundamentos de Estatística.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/logo-200x200.png">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Plano de Ensino">
+  <meta name="twitter:description" content="Um website de apoio ao ensino de Fundamentos de Estatística.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/plan/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/logo-200x200.png">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/plan/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/fundamentos-de-estatistica/assets/images/avatar-ronan.jpg" alt="Ronan Soares" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Ronan Soares</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Professor do Departamento de Estatística e Matemática Aplicada da Universidade Federal do Ceará.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Acompanhe no</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Fortaleza - Ceará - Brazil</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/ronan-soares/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/SeuRonao" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://SeuRonao.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:ronan.soares@ufc.br">
+            <meta itemprop="email" content="ronan.soares@ufc.br">
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">E-mail</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Plano de Ensino">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Plano de Ensino
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li><a href="#identifica%C3%A7%C3%A3o">Identificação</a></li>
+<li><a href="#justificativa">Justificativa</a></li>
+<li><a href="#ementa">Ementa</a></li>
+<li><a href="#conte%C3%BAdo-program%C3%A1tico">Conteúdo Programático</a></li>
+<li><a href="#metodologia">Metodologia</a></li>
+<li><a href="#atividades-discentes">Atividades Discentes</a></li>
+<li><a href="#procedimentos-de-avalia%C3%A7%C3%A3o-da-aprendizagem">Procedimentos de Avaliação da Aprendizagem</a></li>
+<li><a href="#frequ%C3%AAncia-e-abono-de-faltas">Frequência e Abono de Faltas</a></li>
+<li><a href="#hor%C3%A1rio-de-atendimento">Horário de Atendimento</a></li>
+<li><a href="#segunda-chamada">Segunda Chamada</a></li>
+<li><a href="#cronograma">Cronograma</a></li>
+<li>
+<a href="#refer%C3%AAncias">Referências</a><ul><li><a href="#lista-de-refer%C3%AAncias">Lista de Referências</a></li></ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>O Plano de Ensino da disciplina pode ser encontrado aqui.</p>
+
+<h2 id="identificação">Identificação</h2>
+
+<ul>
+  <li>Nome: Fundamentos de Estatística</li>
+  <li>Código: CC0218</li>
+  <li>Carga Horária: 64h
+    <ul>
+      <li>Teórica: 64h</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="justificativa">Justificativa</h2>
+
+<p>Mostrar a importância da Estatística na vida profissional dos alunos, tornando-os capazes de usarem técnicas básicas para soluções de problemas em suas áreas de atuação.</p>
+
+<h2 id="ementa">Ementa</h2>
+
+<ul>
+  <li>Introdução geral à compreensão de estatística;</li>
+  <li>Estatística descritiva;</li>
+  <li>Probabilidade;</li>
+  <li>Variáveis aleatórias;</li>
+  <li>Distribuição binomial;</li>
+  <li>Distribuição normal;</li>
+  <li>Distribuições amostrais;</li>
+  <li>Estimação;</li>
+  <li>Teste de hipótese;</li>
+  <li>Regressão linear simples.</li>
+</ul>
+
+<h2 id="conteúdo-programático">Conteúdo Programático</h2>
+
+<ol>
+  <li>Introdução Geral;</li>
+  <li>Estatística descritiva: representação tabular e gráfica;</li>
+  <li>Medidas de tendência central: média, moda e mediana;</li>
+  <li>Medidas de dispersão: variância, desvio padrão e desvio médio;</li>
+  <li>Probabilidade: técnicas de contagem, eventos, eventos equiprováveis, probabilidade condicional, regra de Bayer;</li>
+  <li>Variáveis aleatórias: introdução geral, distribuição binomial, distribuição normal e aproximação da binomial à normal;</li>
+  <li>Inferência estatística: distribuições amostrais, estimação pontual e intervalar para médias e proporções;</li>
+  <li>Testes de hipóteses: testes para médias e proporções;</li>
+  <li>Regressão linear simples.</li>
+</ol>
+
+<h2 id="metodologia">Metodologia</h2>
+
+<p>As aulas são ministradas majoritariamente de forma <strong>assíncrona</strong> por meio da plataforma YouTube.</p>
+
+<p>Os links para os vídeos podem ser encontrados no SIGAA.</p>
+
+<p>Uma e-mails são utilizado para melhor comunicação entre alunos e/ou professor.
+Para notícias o atual site, utilizando os <a href="/fundamentos-de-estatistica/year-archive/">posts</a> serão utilizados.
+Para dúvidas, encontros síncronos no horário da disciplina é utilizado.</p>
+
+<h2 id="atividades-discentes">Atividades Discentes</h2>
+
+<p>Os alunos resolvem exercícios passados via a plataforma Google Classroom utilizando o email institucional da UFC.</p>
+
+<h2 id="procedimentos-de-avaliação-da-aprendizagem">Procedimentos de Avaliação da Aprendizagem</h2>
+
+<p>A nota parcial, $n_p$, da disciplina é obtida através da média aritmética das notas das atividades enviadas pelo Google Classroom.</p>
+
+<ul>
+  <li>Se $n_p \geq 7$, o aluno está aprovado com nota $n_p$.</li>
+  <li>Se $n_p &lt; 4$, o aluno está reprovado com nota $n_p$.</li>
+  <li>Se $4 \leq n_p &lt; 7$, o aluno faz uma avaliação final obtendo nota $a$.
+A nota final do aluno é, nesse caso, dada por $n_f = \frac{n_p + a}{2}$.
+    <ul>
+      <li>Se $a &lt; 4$ ou $n_f &lt; 5$ o aluno está reprovado.</li>
+      <li>Se $a \geq 4$ e $n_f \geq 5$ o aluno está aprovado.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="frequência-e-abono-de-faltas">Frequência e Abono de Faltas</h2>
+
+<p>Será aplicado o regimento geral da UFC em relação às faltas:</p>
+
+<blockquote>
+  <p>Art. 109. A avaliação do rendimento escolar será feita por disciplina e, quando se fizer necessário, na perspectiva de todo o curso, abrangendo sempre a assiduidade e a eficiência, ambas eliminatórias por si mesmas.</p>
+
+  <p>§1o Entende-se por assiduidade a frequência às atividades correspondentes a cada disciplina.</p>
+
+  <p>Art. 113. Na verificação da assiduidade, será aprovado o aluno que frequentar 75% (setenta e cinco por cento) ou mais da carga horária da disciplina, vedado o abono de faltas.</p>
+</blockquote>
+
+<p>A aferição da frequência do aluno sera feita utilizando um <em>sistema de honra</em> em que o aluno deverá comunicar via e-mail, no final do semestre, quais e quantas aulas ele não assistiu.</p>
+
+<h2 id="horário-de-atendimento">Horário de Atendimento</h2>
+
+<p>As dúvidas poderão ser respondidas via e-mail ou durante os encontros síncronos.</p>
+
+<h2 id="segunda-chamada">Segunda Chamada</h2>
+
+<p>Devido ao processo avaliativo ser feito por forma de atividades com amplo tempo de resposta, não serão necessárias segundas-chamadas.</p>
+
+<h2 id="cronograma">Cronograma</h2>
+
+<p>2021.2:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aulas</th>
+      <th>Data</th>
+      <th>Tópico</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01</td>
+      <td>27/09 à 27/09</td>
+      <td>Introdução Geral;</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>29/09 à 11/10</td>
+      <td>Estatística descritiva: representação tabular e gráfica;</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>13/10 à 25/10</td>
+      <td>Medidas de tendência central: média, moda e mediana;</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>27/10 à 08/11</td>
+      <td>Medidas de dispersão: variância, desvio padrão e desvio médio;</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>10/11 à 24/11</td>
+      <td>Probabilidade: técnicas de contagem, eventos, eventos equiprováveis, probabilidade condicional, regra de Bayer;</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>29/11 à 13/12</td>
+      <td>Variáveis aleatórias: introdução geral, distribuição binomial, distribuição normal e aproximação da binomial à normal;</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>15/12 à 17/01</td>
+      <td>Inferência estatística: distribuições amostrais, estimação pontual e intervalar para médias e proporções;</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>19/01 à 31/01</td>
+      <td>Testes de hipóteses: testes para médias e proporções;</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>02/02 à 07/02</td>
+      <td>Regressão linear simples.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="referências">Referências</h2>
+
+<p>As referências básicas da disciplina são <a class="citation" href="#stevenson2001estatistica">(Stevenson, 2001; Toledo &amp; Ovalle, 1985; Vieira, 2003; Triola, 2008; Kazmier, 2006)</a>.</p>
+
+<p>As referências complementares da disciplina são <a class="citation" href="#bussab2004estatistica">(Bussab &amp; Morettin, 2004; Salvatore &amp; Reagle, 2001)</a>.</p>
+
+<h3 id="lista-de-referências">Lista de Referências</h3>
+
+<ol class="bibliography">
+<li><span id="stevenson2001estatistica">Stevenson, W. J. (2001). <i>Estatística aplicada a administração</i>. Harbra. https://books.google.com.br/books?id=03_TAAAACAAJ</span></li>
+<li><span id="toledo1985estatística">Toledo, G. L., &amp; Ovalle, I. I. (1985). <i>Estatística básica</i>. Atlas. https://books.google.com.br/books?id=cVDSGwAACAAJ</span></li>
+<li><span id="vieira2003elementos">Vieira, S. (2003). <i>Elementos de estatística</i>. Atlas. https://books.google.com.br/books?id=_UVyOwAACAAJ</span></li>
+<li><span id="triola2008introdução">Triola, M. F. (2008). <i>Introdução à estatística</i>. LTC. https://books.google.com.br/books?id=P83xAQAACAAJ</span></li>
+<li><span id="kazmier2006estatística">Kazmier, L. J. (2006). <i>Estatística Aplicada à Administração e Economia - 4.ed.</i> Bookman Editora. https://books.google.com.br/books?id=4ag6DQAAQBAJ</span></li>
+<li><span id="bussab2004estatistica">Bussab, W. O., &amp; Morettin, P. A. (2004). <i>Estatística básica</i>. Saraiva. https://books.google.com.br/books?id=ARMJQgAACAAJ</span></li>
+<li><span id="salvatore2001schaum">Salvatore, D., &amp; Reagle, D. (2001). <i>Schaum’s Outline of Statistics and Econometrics</i>. McGraw-Hill Education. https://books.google.com.br/books?id=paeOUPNlXeIC</span></li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Plano+de+Ensino%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fplan%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fplan%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fplan%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

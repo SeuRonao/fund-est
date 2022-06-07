@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- Change masthead title here -->
+		<title>Demo Presentation</title>
+		<!-- Change description here -->
+		<meta name="description" content="Demo presentation for testing if Jekyll and reveal.js can cohabit the same repository">
+		<!-- Change author here -->
+		<meta name="author" content="Ronan Soares">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				<h3>This is a Sample Testing Math</h3>
+				<h4>The Lorenz Equations</h4>
+				\[
+					\begin{aligned}
+					\dot{x} &amp; = \sigma(y-x) \\
+					\dot{y} &amp; = \rho x - y - xz \\
+					\dot{z} &amp; = -\beta z + xy
+					\end{aligned}
+				\]
+				</section>
+				<section>
+				<h3>This is a second slide with code</h3>
+				<pre><code data-trim data-noescape>
+					def main():
+						pass
+					if __name__ == "__main__":
+						main()
+				</code></pre>
+				</section>
+			</div>
+		</div>
+		<script src="../reveal.js/dist/reveal.js"></script>
+		<script src="../reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../reveal.js/plugin/search/search.js"></script>
+		<script src="../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="../reveal.js/plugin/math/math.js"></script>
+		<script>
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.MathJax3 ]
+			});
+		</script>
+	</body>
+</html>

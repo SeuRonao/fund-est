@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Variáveis Aleatórias - Fundamentos de Estatística</title>
+<meta name="description" content="É uma forma de resumir a parte interessante de um experimento aleatório. Também é uma ferramenta para facilitar a quantificação de eventos em valores numéricos.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+  <meta property="article:author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Variáveis Aleatórias">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/variaveis-aleatorias">
+
+
+  <meta property="og:description" content="É uma forma de resumir a parte interessante de um experimento aleatório. Também é uma ferramenta para facilitar a quantificação de eventos em valores numéricos.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/gamble-500x300.jpg">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Variáveis Aleatórias">
+  <meta name="twitter:description" content="É uma forma de resumir a parte interessante de um experimento aleatório. Também é uma ferramenta para facilitar a quantificação de eventos em valores numéricos.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/variaveis-aleatorias">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/gamble-500x300.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-07T08:40:29-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/subjects/variaveis-aleatorias">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Variáveis Aleatórias">
+    <meta itemprop="description" content="É uma forma de resumir a parte interessante de um experimento aleatório.Também é uma ferramenta para facilitar a quantificação de eventos em valores numéricos.">
+    <meta itemprop="datePublished" content="2022-06-07T08:40:29-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Variáveis Aleatórias
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li><a href="#exemplo">Exemplo</a></li>
+<li>
+<a href="#vari%C3%A1veis-aleat%C3%B3rias-discretas">Variáveis Aleatórias Discretas</a><ul>
+<li><a href="#exemplos">Exemplos</a></li>
+<li><a href="#distribui%C3%A7%C3%A3o-de-probabilidade">Distribuição de Probabilidade</a></li>
+<li><a href="#par%C3%A2metros-de-uma-va-x">Parâmetros de uma v.a. $x$</a></li>
+</ul>
+</li>
+<li>
+<a href="#distribui%C3%A7%C3%A3o-binomial">Distribuição Binomial</a><ul><li>
+<a href="#par%C3%A2metros-da-distribui%C3%A7%C3%A3o-de-probabilidade-binomial">Parâmetros da distribuição de Probabilidade Binomial</a><ul><li><a href="#observa%C3%A7%C3%A3o">Observação</a></li></ul>
+</li></ul>
+</li>
+<li>
+<a href="#vari%C3%A1veis-aleat%C3%B3rias-cont%C3%ADnuas">Variáveis Aleatórias Contínuas</a><ul>
+<li><a href="#exemplos-1">Exemplos</a></li>
+<li>
+<a href="#fun%C3%A7%C3%A3o-de-densidade-de-probabilidade">Função de Densidade de Probabilidade</a><ul><li><a href="#exemplos-2">Exemplos</a></li></ul>
+</li>
+<li>
+<a href="#distribui%C3%A7%C3%A3o-normal">Distribuição Normal</a><ul><li><a href="#distribui%C3%A7%C3%A3o-normal-padr%C3%A3o">Distribuição Normal Padrão</a></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#aproxima%C3%A7%C3%A3o-da-binomial-%C3%A0-normal">Aproximação da Binomial à Normal</a><ul><li><a href="#exemplo-1">Exemplo</a></li></ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>É uma forma de resumir <em>a parte interessante</em> de um experimento aleatório.
+Também é uma ferramenta para facilitar a quantificação de eventos em valores numéricos.</p>
+
+<h2 id="exemplo">Exemplo</h2>
+
+<p>Seja o experimento aleatório em que uma pessoa é sorteada ao acaso.</p>
+
+<p>Dependendo do estudo, pode-se ter interesse em saber a altura dessa pessoa, o peso, a quantidade de filhos, o grau de escolaridade, quantas calorias ela ingere por semana, se ela apoia ou não um projeto de lei.</p>
+
+<p>Uma variável aleatória é uma função que associa um número ao resultado de um experimento aleatório.
+Por exemplo, associar o resultado de selecionar uma pessoa à altura dessa pessoa.</p>
+
+<h2 id="variáveis-aleatórias-discretas">Variáveis Aleatórias Discretas</h2>
+
+<p>É uma variável que associa um resultado em $\Omega$ à <em>um número inteiro</em>.</p>
+
+<h3 id="exemplos">Exemplos</h3>
+
+<ul>
+  <li>A quantidade de caras em um lançamento de $n$ moedas.</li>
+  <li>A quantidade de filhos de uma pessoa selecionada aleatoriamente.</li>
+  <li>A soma dos números em um lançamento de $n$ dados.</li>
+</ul>
+
+<h3 id="distribuição-de-probabilidade">Distribuição de Probabilidade</h3>
+
+<p>Dado um experimento aleatório com espaço amostral $\Omega$ e uma variável aleatória discreta $x$.</p>
+
+<ul>
+  <li>Todo evento $A$ está associado à algum resultado de $x$.</li>
+  <li>$P(x = k)$ é a probabilidade de ocorrer algum evento associado ao valor $k$.
+Ou seja, no caso de um lançamento de $n$ moedas e $x$ ser o número de caras, $P(x = 3)$ é a probabilidade de sairem exatamente $3$ caras nesse lançamento.</li>
+  <li>$0 \leq P(x = k) \leq 1$ qualquer que seja $k$.</li>
+  <li>$\sum_i P(x = i) = 1$.</li>
+</ul>
+
+<h3 id="parâmetros-de-uma-va-x">Parâmetros de uma v.a. $x$</h3>
+
+<ul>
+  <li>A média $\mu_x$:
+$$\mu_x = \sum_k k \cdot P(x = k)$$</li>
+  <li>Variância $\sigma^2_x$:
+$$\sigma^2_x = \sum_k (k - \mu_x)^2 \cdot P(x = k)$$
+ou
+$$\sigma^2_x = \sum_k (k^2\cdot P(x = k)) - \mu^2_x$$</li>
+  <li>Desvio padrão $\sigma_x$
+$$\sigma_x = \sqrt{\sum_k (k^2\cdot P(x = k)) - \mu^2_x}$$</li>
+</ul>
+
+<p>O valor esperado $E(x)$ é dado por $\mu_x$.</p>
+
+<h2 id="distribuição-binomial">Distribuição Binomial</h2>
+
+<p>Considere um experimento aleatório que consiste em fazer vários testes com as seguintes caracteristicas:</p>
+
+<ul>
+  <li>Número fixo de testes.</li>
+  <li>Testes <em>independentes</em> entre si.</li>
+  <li>Cada teste pode dar <em>sucesso</em> ou <em>falha</em>.</li>
+  <li>Todos os testes tem a mesma chance de sucesso.</li>
+</ul>
+
+<p>Dizemos que a v.a. que mede o número de sucessos desse tipo de experimento possui distribuição <strong>binomial</strong>.</p>
+
+<p>Seja $p$ a chance de sucesso em <em>um</em> único teste, $q = 1 - p$ e $n$ o total de testes.</p>
+
+<p>$$P(x = k) = \binom{n}{k} p^k q^{n - k}$$
+ou
+$$P(x = k) = \frac{n!}{(n - k)! k!} p^k q^{n - k}$$</p>
+
+<h3 id="parâmetros-da-distribuição-de-probabilidade-binomial">Parâmetros da distribuição de Probabilidade Binomial</h3>
+
+<ul>
+  <li>Média: $\mu = np$</li>
+  <li>Variância: $\sigma^2 = npq$</li>
+  <li>Desvio padrão: $\sigma = \sqrt{npq}$</li>
+</ul>
+
+<h4 id="observação">Observação</h4>
+
+<p>É muito difícil que ao realizar o experimento você encontre algum valor de $x$ muito longe, i.e. $\mu \pm 2\sigma$ da média com esse tipo de distribuição.</p>
+
+<h2 id="variáveis-aleatórias-contínuas">Variáveis Aleatórias Contínuas</h2>
+
+<p>É uma variável que associa um resultado em $\Omega$ à um número real.</p>
+
+<h3 id="exemplos-1">Exemplos</h3>
+
+<ul>
+  <li>A altura de uma pessoa.</li>
+  <li>A taxa de glicose no sangue em jejum.</li>
+  <li>A quantidade em gramas de chocolate que vem de fato em um pacote.</li>
+</ul>
+
+<h3 id="função-de-densidade-de-probabilidade">Função de Densidade de Probabilidade</h3>
+
+<p>Dado um experimento aleatório com uma v.a. contínua $x$.</p>
+
+<p>Suponha que $x$ seja a altura de uma pessoa, qual a chance de encontrarmos uma pessoa com <em>exatamente</em> $1.70$m.
+Nem um átomo de altura à mais nem a menos do que isso.
+Extrapolando esse conceito para qualquer outro valor $k$ de altura temos o mesmo problema.
+Ou seja, $P(x = k) = 0$ qualquer que seja $k$ para uma variável contínua.</p>
+
+<p>Claramente temos que $P(0 \leq x \leq 2)$ não é zero pois é relativamente fácil encontrar alguem com menos de dois metros de altura.</p>
+
+<p>Ou seja, teremos que mudar um pouco os conceitos para que a probabilidade de uma v.a. contínua faça sentido.</p>
+
+<p>Seja $f(x)$ a <strong>função de densidade de probabilidade</strong> de $x$ isso significa que:
+$$P(a \leq x \leq b) = \int^b_a f(x)$$
+Em outras palavras, $P(a \leq x \leq b)$ é a área abaixo da curva comecando em $a$ e terminando em $b$ quando fazemos o desenho de $f(x)$ no plano cartesiano.</p>
+
+<p>Uma função de densidade de probabilidade é tal que a área total da curva tem que ser <strong>exatamente</strong> um.</p>
+
+<h4 id="exemplos-2">Exemplos</h4>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_Distribution_PDF_SVG.svg/250px-Uniform_Distribution_PDF_SVG.svg.png" alt="Exemplo de Função de Densidade de Probabilidade"><figcaption>
+      Exemplo de Função de Densidade de Probabilidade 1
+
+    </figcaption></figure>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Uniform_cdf.svg/250px-Uniform_cdf.svg.png" alt="Exemplo de Função de Densidade de Probabilidade"><figcaption>
+      Exemplo de Função de Densidade de Probabilidade 2
+
+    </figcaption></figure>
+
+<p>Várias curvas normais:</p>
+
+<figure class="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Normal_Distribution_PDF.svg/1200px-Normal_Distribution_PDF.svg.png" alt="Exemplos de Curvas Normais"><figcaption>
+      Exemplos de Curvas Normais
+
+    </figcaption></figure>
+
+<h3 id="distribuição-normal">Distribuição Normal</h3>
+
+<p>A distribuição normal é uma v.a. que tem função de densidade de probabilidade:
+$$f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2}$$</p>
+
+<p>Aonde $\sigma$ e $\mu$ são valores escolhidos.
+Por definição uma v.a. que tenha uma função de densidade de probabilidade acima é tal que ela tem média $\mu$ e desvio padrão $\sigma$.</p>
+
+<p>Vamos denotar uma v.a. normal com média $\mu$ e desvio padrão $\sigma$ como $x \sim N(\mu; \sigma)$.</p>
+
+<h4 id="distribuição-normal-padrão">Distribuição Normal Padrão</h4>
+
+<p>A v.a. $Z \sim N(0; 1)$ é comumente chamada de distribuição normal padrão.
+Obviamente, ela tem média $0$ e desvio padrão $1$.</p>
+
+<h2 id="aproximação-da-binomial-à-normal">Aproximação da Binomial à Normal</h2>
+
+<ul>
+  <li>Seja $x$ uma v.a. binomial com $10.000$ testes e $p = 0.5$.</li>
+  <li>$\mu_x = np = 5000$, $\sigma_x = \sqrt{npq} = \sqrt{2500} = 50$.</li>
+  <li>Tente calcular $P(4900 \leq x)$.
+No mínimo você tera que calcular:
+$$\binom{5000}{4900} = \frac{5000!}{100!4900!}$$
+Boa sorte.</li>
+  <li>Por outro lado, uma curva binomial parece muito com uma curva normal quando a quantidade de testes é grande:
+    <figure class="">
+<img src="https://wiki.analytica.com/images/1/14/BinomialDistribution.png" alt="Curva Binomial"><figcaption>
+    Curva Binomial com 100 testes e 0.3 chance de sucesso
+
+  </figcaption></figure>
+  </li>
+  <li>Assim, podemos usar a curva normal no lugar da binomial para fazer as contas.</li>
+</ul>
+
+<h3 id="exemplo-1">Exemplo</h3>
+
+<ul>
+  <li>Vamos fazer o cálculo acima usando uma curva normal em vez da binomial.</li>
+  <li>Como $x$ tem média $\mu_x = 5.000$ e $\sigma = 50$, temos que utilizar a curva normal $N(5.000; 50)$.</li>
+  <li>Se no lugar usarmos $x \sim N(5.000; 50)$ podemos calcular $P(4900 \leq x)$ de forma <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">direta</a> que resulta em $0.97725$.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2022-06-07T08:40:29-03:00">June 7, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Vari%C3%A1veis+Aleat%C3%B3rias%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fvariaveis-aleatorias" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fvariaveis-aleatorias" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fvariaveis-aleatorias" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/fundamentos-de-estatistica/subjects/probabilidade" class="pagination--pager" title="Probabilidade
+">Anterior</a>
+    
+    
+      <a href="/fundamentos-de-estatistica/subjects/inferencia-estatistica" class="pagination--pager" title="Inferência Estatística
+">Próxima</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

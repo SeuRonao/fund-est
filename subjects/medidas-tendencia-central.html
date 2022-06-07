@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Medidas de Tendência Central - Fundamentos de Estatística</title>
+<meta name="description" content="São medidas para resumir o miolo de uma distribuição de frequência em apenas um número.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+  <meta property="article:author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Medidas de Tendência Central">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/medidas-tendencia-central">
+
+
+  <meta property="og:description" content="São medidas para resumir o miolo de uma distribuição de frequência em apenas um número.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/numbers-500x300.jpg">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Medidas de Tendência Central">
+  <meta name="twitter:description" content="São medidas para resumir o miolo de uma distribuição de frequência em apenas um número.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/subjects/medidas-tendencia-central">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/numbers-500x300.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-07T08:40:29-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/subjects/medidas-tendencia-central">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Medidas de Tendência Central">
+    <meta itemprop="description" content="São medidas para resumir o miolo de uma distribuição de frequência em apenas um número.">
+    <meta itemprop="datePublished" content="2022-06-07T08:40:29-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Medidas de Tendência Central
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li>
+<a href="#somat%C3%B3rios">Somatórios</a><ul>
+<li><a href="#exemplo-1-somat%C3%B3rio-simples">Exemplo 1: Somatório Simples</a></li>
+<li><a href="#exemplo-2-somat%C3%B3rio-de-conjunto">Exemplo 2: Somatório de Conjunto</a></li>
+<li><a href="#exemplo-3-somat%C3%B3rio-com-vari%C3%A1vel">Exemplo 3: Somatório com Variável</a></li>
+<li><a href="#exerc%C3%ADcios-de-somat%C3%B3rio">Exercícios de Somatório</a></li>
+</ul>
+</li>
+<li>
+<a href="#m%C3%A9dia-aritm%C3%A9tica-simples">Média Aritmética Simples</a><ul><li><a href="#algumas-propriedades">Algumas Propriedades</a></li></ul>
+</li>
+<li><a href="#m%C3%A9dia-aritm%C3%A9tica-ponderada">Média Aritmética Ponderada</a></li>
+<li><a href="#moda">Moda</a></li>
+<li><a href="#mediana">Mediana</a></li>
+<li><a href="#quantis">Quantis</a></li>
+<li><a href="#midrange">Midrange</a></li>
+<li><a href="#observa%C3%A7%C3%B5es">Observações</a></li>
+<li>
+<a href="#exerc%C3%ADcios-resolvidos">Exercícios Resolvidos</a><ul>
+<li><a href="#exerc%C3%ADcio-1-dados-brutos">Exercício 1: Dados Brutos</a></li>
+<li><a href="#exerc%C3%ADcio-2-distribui%C3%A7%C3%A3o-de-frequ%C3%AAncia">Exercício 2: Distribuição de Frequência</a></li>
+<li><a href="#exerc%C3%ADcio-3-distribui%C3%A7%C3%A3o-de-frequ%C3%AAncia-com-dados-agrupados">Exercício 3: Distribuição de Frequência com Dados Agrupados</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>São medidas para resumir o <em>miolo</em> de uma distribuição de frequência em apenas um número.</p>
+
+<p>Para simplificar a notação, todo somatório na forma $\sum_{i=1}^n$ será escrito como $\sum$ quando o contexto dos itens a serem somados ficar claro.</p>
+
+<h2 id="somatórios">Somatórios</h2>
+
+<p>Um somatório é uma forma de resumir uma sequencia de somas.
+O símbolo que representa é o sigma maiúsculo $\sum$.
+Existem algumas formas diferentes de dizer o que vai ser somado, ou resumido, a mais comum é:</p>
+
+<p>$$\sum_{i = k}^n f(i)$$</p>
+
+<p>A fórmula acima é um resumo para a soma de todos os valores de $i$ variando de $k$ até $n$.
+Ou seja, o somatório acima pode ser lido como:
+Some o resultado de $f(i)$ para cada valor de $i$ de $k$ até $n$.
+No caso seria, $f(k) + f(k + 1) + f(k + 2) + \cdots + f(n)$.</p>
+
+<h3 id="exemplo-1-somatório-simples">Exemplo 1: Somatório Simples</h3>
+
+<p>$$\sum_{i = 2}^5 2i$$</p>
+
+<p>Esse somatório pode ser lido como:</p>
+
+<blockquote>
+  <p>O somatório de $i$ variando de $2$ até $5$ de $2i$.</p>
+</blockquote>
+
+<p>A expansão do somatório seria:</p>
+
+<p>$$\sum_{i = 2}^5 2i = 2 \cdot (2) + 2 \cdot (3) + 2 \cdot (4) + 2 \cdot (5)$$</p>
+
+<p>$$\sum_{i = 2}^5 2i = 4 + 6 + 8 + 10$$</p>
+
+<p>$$\sum_{i = 2}^5 2i = 28$$</p>
+
+<h3 id="exemplo-2-somatório-de-conjunto">Exemplo 2: Somatório de Conjunto</h3>
+
+<p>Dado um conjunto $S$ de valores numericos, outra notação é da seguinte forma:</p>
+
+<p>$$\sum_{i \in S} f(i)$$</p>
+
+<p>Suponha que $S = {-3, 2, 4, 8}$, e que $f(i) = 2^i$.</p>
+
+<p>$$\sum_{i \in S} 2^i$$</p>
+
+<blockquote>
+  <p>Somatório de $i$ pertencente à $S$ de $2^i$.</p>
+</blockquote>
+
+<p>A expansão do somatório fica:</p>
+
+<p>$$\sum_{i \in S} 2^i = 2^{-3} + 2^2 + 2^4 + 2^8$$</p>
+
+<p>$$\sum_{i \in S} 2^i = 1/8 + 4 + 16 + 256$$</p>
+
+<p>$$\sum_{i \in S} 2^i = 276.125$$</p>
+
+<h3 id="exemplo-3-somatório-com-variável">Exemplo 3: Somatório com Variável</h3>
+
+<p>Dada uma variável com valores observados $x_1, x_2, \dots, x_n$.
+Note que, são todos os valores observados, inclusive se tiver repetição, vai aparecer repetido alguns valores de $x_i$.</p>
+
+<p>$$\sum_{i = 1}^n f(x_i)$$</p>
+
+<p>Suponha que os valores observados para $x$ são:</p>
+
+<p>$$-2, 2, 3, 3, 5, 7$$</p>
+
+<p>E que $f(x_i) = 2x_i + 3$.</p>
+
+<p>$$\sum_{i = 1}^6 2x_i + 3$$</p>
+
+<p>A expansão fica:</p>
+
+<p>$$\sum_{i = 1}^6 2x_i + 3 = (2x_1 + 3) + (2x_2 + 3) + (2x_3 + 3) + (2x_4 + 3) + (2x_5 + 3) + (2x_6 + 3)$$</p>
+
+<p>$$\sum_{i = 1}^6 2x_i + 3 = (2 \cdot -2 + 3) + (2 \cdot 2 + 3) + (2 \cdot 3 + 3) + (2 \cdot 3 + 3) + (2 \cdot 5 + 3) + (2 \cdot 7 + 3)$$</p>
+
+<p>$$\sum_{i = 1}^6 2x_i + 3 = (-4 + 3) + (4 + 3) + (6 + 3) + (6 + 3) + (10 + 3) + (14 + 3)$$</p>
+
+<p>$$\sum_{i = 1}^6 2x_i + 3 = -4 + 4 + 6 + 6 + 10 + 14 + 6 \cdot 3$$</p>
+
+<p>$$\sum_{i = 1}^6 2x_i + 3 = 54$$</p>
+
+<h3 id="exercícios-de-somatório">Exercícios de Somatório</h3>
+
+<p>Vamos calcular:</p>
+
+<ol>
+  <li>$\sum_{i = 1}^6 3$</li>
+  <li>$\sum_{i = 4}^3 f(i)$</li>
+  <li>$\sum_{i = 1}^4 \sum_{j = 3}^i i + j$</li>
+  <li>$\sum_{i = 1}^{50} 5i + 7 + \sqrt{i}$, pode usar gerenciador de planilha.</li>
+</ol>
+
+<p>As respostas podem ser encontradas <a href="/fundamentos-de-estatistica/assets/answers/medidas-tendencia-central/">aqui</a>.</p>
+
+<h2 id="média-aritmética-simples">Média Aritmética Simples</h2>
+
+<p>Considere que $x_1, x_2, x_3, \ldots, x_n$ são os valores de uma variável $x$.</p>
+
+<p>Então, a média aritmética $\bar{x}$ é definida por:
+$$\bar{x} = \frac{\sum x_i}{n}$$</p>
+
+<p>Considere o desvio de um valor específico $x_i$ de $x$ em relação à média $\bar{x}$ dado por $d_i = x_i - \bar{x}$.</p>
+
+<h3 id="algumas-propriedades">Algumas Propriedades</h3>
+
+<ul>
+  <li>A soma dos desvios resulta em zero.
+$$\sum d_i = 0$$</li>
+  <li>A média minimiza o quadrado dos desvios se comparada com qualquer outro número, por exemplo $w$.
+$$\sum d_i^2 \leq \sum (x_i - w)^2$$</li>
+  <li>Se $n_1$ números tem média $\bar{x}_1$, $n_2$ números tem média $\bar{x}_2$, $\ldots$, $n_k$ números tem média $\bar{x}_k$, então a média $\bar{x}$ de todos esses números é dada por:
+$$\bar{x} = \frac{\sum n_i \bar{x}_i}{\sum n_i}$$</li>
+  <li>Somar $w$ em cada número que compõe a média aumenta a média em $w$.
+Considere $y_i = x_i + w$:
+$$\bar{y} = \bar{x} + w$$</li>
+  <li>Multiplicar por $w$ cada número que compõe a média multiplica a média em $w$.
+Considere $y_i = x_i \cdot w$:
+$$\bar{y} = \bar{x} \cdot w$$</li>
+</ul>
+
+<h2 id="média-aritmética-ponderada">Média Aritmética Ponderada</h2>
+
+<p>Se $x_1, x_2, x_3, \ldots, x_k$ são os valores de uma variável $x$, $n_1, \ldots, n_k$ são os números absolutos de vezes que a variável assume cada um desses valores e $n = \sum n_i$.
+Então, a média aritmética $\bar{x}$ é definida por:
+$$\bar{x} = \frac{\sum n_i \cdot x_i}{n}$$</p>
+
+<h2 id="moda">Moda</h2>
+
+<p>É o valor de maior frequência.</p>
+
+<ul>
+  <li>Quando existe apenas um, é unimodal.</li>
+  <li>Quando existem dois, é bimodal.</li>
+  <li>Quando existirem mais de dois, é multimodal.</li>
+  <li>Quando todos os valores tem a mesma frequência, amodal.</li>
+</ul>
+
+<h2 id="mediana">Mediana</h2>
+
+<p>Supondo que $x_1 \leq x_2 \leq x_3 \leq \cdots \leq x_n$ a mediana pode ser definida como $\mathrm{md}(x) = x_{(n+1)/2}$ se $n$ é ímpar, ou $\mathrm{md}(x) = (x_{n/2} + x_{n/2 + 1})/2$ se $n$ par.</p>
+
+<h2 id="quantis">Quantis</h2>
+
+<p>O quantil $q(p)$, $0 \leq p \leq 1$, é o valor da variável tal que existem $p \cdot n$ valores são menores do que ela e $(1 - p) \cdot n$ valores maiores do que ela.</p>
+
+<p>Se o quantil não existir, então usa-se a média aritmética dos valores mais próximos do quantil desejado, como por exemplo $q(0.5) = \mathrm{md}(x)$.</p>
+
+<p>Os quantis mais famosos são os:</p>
+
+<ul>
+  <li>$q(0.25)$: primeiro quartil.</li>
+  <li>$q(0.5)$: segundo quartil ou <em>mediana</em>.</li>
+  <li>$q(0.75)$: terceiro quartil.</li>
+</ul>
+
+<h2 id="midrange">Midrange</h2>
+
+<p>É a média entre o maior e menor valores observados.</p>
+
+<h2 id="observações">Observações</h2>
+
+<ul>
+  <li>A média pode sofrer grandes alterações quando uma observação muito grande ou muito pequena é adicionada ao conjunto de observações.</li>
+  <li>A mediana e a moda são mais robusta quanto a essas alterações.</li>
+  <li>A moda pode ser usada também para variáveis qualitativas.</li>
+  <li>Nem sempre faz sentido calcular medidas de tendência central só por uma variável ser numérica.
+De que nos serviria calcular a média dos CEPs de um conjunto de endereços, ou a mediana dos números de RG de uma população de um estado?</li>
+</ul>
+
+<h2 id="exercícios-resolvidos">Exercícios Resolvidos</h2>
+
+<h3 id="exercício-1-dados-brutos">Exercício 1: Dados Brutos</h3>
+
+<p>Seja $x$ uma variável quantitativa discreta.
+Com valores dados pela tabela abaixo:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identificação</th>
+      <th>$x$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>
+    <p>Calcule a média aritmética de $x$.</p>
+
+    <p>A média aritmética é definida por:
+$$\bar{x} = \frac{\sum x_i}{n}$$
+No caso, $n = 10$ e os valores são dados pela tabela.
+Resultado:
+$$\bar{x} = \frac{0 + 0 + 2 + 2 + 3 + 5 + 7 + 9 + 10 + 20}{10} = \frac{58}{10} = 5.8$$</p>
+  </li>
+  <li>
+    <p>Calcule a moda de $x$.</p>
+
+    <p>A variável $x$ é bimodal com modas $0$ e $2$ ambas com duas observações cada.</p>
+  </li>
+  <li>
+    <p>Calcule a mediana de $x$.</p>
+
+    <p>A mediana de $x$, como $n = 10$ é par é dada por
+$$\mathrm{md}(x) = \frac{x_{n/2} + x_{n/2 + 1}}{2} = \frac{x_5 + x_6}{2} = \frac{3 + 5}{2} = 4$$</p>
+  </li>
+</ol>
+
+<h3 id="exercício-2-distribuição-de-frequência">Exercício 2: Distribuição de Frequência</h3>
+
+<p>Agora, considerando a tabela de distribuição de frequência de $x$ responda as mesmas perguntas.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>$n_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>
+    <p>Calcule a média aritmética de $x$.</p>
+
+    <p>No caso, a média aritmética ponderada.</p>
+
+    <p>$$\bar{x} = \frac{\sum n_i x_i}{n} = \frac{2 \cdot 0 + 2 \cdot 2 + 1 \cdot 3 + 1 \cdot 5 + 1 \cdot 7 + 1 \cdot 9 + 1 \cdot 10 + 1 \cdot 20}{10} = \frac{58}{10} = 5.8$$</p>
+  </li>
+  <li>
+    <p>Calcule a moda de $x$.</p>
+
+    <p>Basta olhar o(s) maiores $n_i$ na tabela de distribuição de frequência.
+Os valores são $0$ e $2$ com duas observações.</p>
+  </li>
+  <li>
+    <p>Calcule a mediana de $x$.</p>
+
+    <p>O problema está no fato de que a tabela de distribuição de frequência agrega os valores iguais, então para saber quais são os dois valores que estão <em>no meio</em> da fila de valores é necessário <em>desembrulhar</em> toda a fila.
+Dessa forma, o problema se resume à calcular a mediana da mesma maneira que na questão anterior.</p>
+  </li>
+</ol>
+
+<h3 id="exercício-3-distribuição-de-frequência-com-dados-agrupados">Exercício 3: Distribuição de Frequência com Dados Agrupados</h3>
+
+<p>Agora, considerando a tabela de distribuição de frequência de $x$ agrupado por classes responda as mesmas perguntas.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>$n_i$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 - 3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>5 - 9</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>10 - 20</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>
+    <p>Calcule a média aritmética de $x$.</p>
+
+    <p>Como a tabela está agrupada por classes, é necessário escolher um número para representar cada classe.
+Uma opção é escolher o <em>midrange</em> de cada classe.
+Ficariamos com $1.5$ para a primeira classe, $7$ para a segunda e $15$ para a terceira classe.
+A média aritmética seguindo essa convenção fica:</p>
+
+    <p>$$\bar{x} = \frac{\sum n_i x_i}{n} = \frac{5  \cdot  1.5 + 3  \cdot  7 + 2  \cdot  15}{10} = \frac{58.5}{10} = 5.85$$</p>
+  </li>
+  <li>
+    <p>Calcule a moda de $x$.</p>
+
+    <p>A moda terá que ser um membro da classe com maior quantidade de observações no caso $0 - 3$ que tem como <em>midrange</em> $1.5$.</p>
+  </li>
+  <li>
+    <p>Calcule a mediana de $x$.</p>
+
+    <p>A mediana, como no exercício anterior, terá de ser calculada <em>desembrulhando</em> os valores das classes.
+Também teremos que utilizar algum valor para representar a classe.
+Ou seja, os valores considerados serão:</p>
+
+    <p>$$1.5, 1.5, 1.5, 1.5, \textcolor{red}{1.5}, \textcolor{blue}{7}, 7, 7, 15, 15$$</p>
+
+    <p>Que resulta em $\frac{1.5 + 7}{2} = 4.25$.</p>
+  </li>
+  <li>
+    <p>Qual é o menor e maior valor teórico para a média seguindo essa tabela de distribuição de frequência.</p>
+
+    <p>Para saber o menor/maior valor teórico para a média aritmética, podemos usar os limites inferiores/superiores de cada classe em vez do <em>midrange</em> para representá-las.</p>
+
+    <p>O menor valor seria:</p>
+
+    <p>$$\bar{x} = \frac{5 \cdot 0 + 3 \cdot 5 + 2 \cdot 10}{10} = \frac{35}{10} = 3.5$$</p>
+
+    <p>O maior valor seria:</p>
+
+    <p>$$\bar{x} = \frac{5 \cdot 3 + 3 \cdot 9 + 2 \cdot 20}{10} = \frac{82}{10} = 8.2$$</p>
+  </li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2022-06-07T08:40:29-03:00">June 7, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Medidas+de+Tend%C3%AAncia+Central%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fmedidas-tendencia-central" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fmedidas-tendencia-central" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fsubjects%2Fmedidas-tendencia-central" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/fundamentos-de-estatistica/subjects/estatistica-descritiva" class="pagination--pager" title="Estatística Descritiva
+">Anterior</a>
+    
+    
+      <a href="/fundamentos-de-estatistica/subjects/medidas-dispersao" class="pagination--pager" title="Medidas de Dispersão
+">Próxima</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

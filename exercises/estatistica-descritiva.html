@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+--><html lang="pt" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Estatística Descritiva - Fundamentos de Estatística</title>
+<meta name="description" content="Exercícios sobre Estatística Descritiva.">
+
+
+  <meta name="author" content="Ronan Soares">
+  
+  <meta property="article:author" content="Ronan Soares">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fundamentos de Estatística">
+<meta property="og:title" content="Estatística Descritiva">
+<meta property="og:url" content="https://seuronao.github.io/fundamentos-de-estatistica/exercises/estatistica-descritiva">
+
+
+  <meta property="og:description" content="Exercícios sobre Estatística Descritiva.">
+
+
+
+  <meta property="og:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/graphs-500x300.jpg">
+
+
+
+  <meta name="twitter:site" content="@seuronao">
+  <meta name="twitter:title" content="Estatística Descritiva">
+  <meta name="twitter:description" content="Exercícios sobre Estatística Descritiva.">
+  <meta name="twitter:url" content="https://seuronao.github.io/fundamentos-de-estatistica/exercises/estatistica-descritiva">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://seuronao.github.io/fundamentos-de-estatistica/assets/images/teasers/graphs-500x300.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-07T08:40:29-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seuronao.github.io/fundamentos-de-estatistica/exercises/estatistica-descritiva">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "SeuRonão",
+      "url": "https://seuronao.github.io/fundamentos-de-estatistica/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/fundamentos-de-estatistica/feed.xml" type="application/atom+xml" rel="alternate" title="Fundamentos de Estatística Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/fundamentos-de-estatistica/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fundamentos-de-estatistica/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fundamentos-de-estatistica/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/fundamentos-de-estatistica/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/fundamentos-de-estatistica/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/fundamentos-de-estatistica/"><img src="/fundamentos-de-estatistica/assets/images/logo-200x200.png" alt="Fundamentos de Estatística"></a>
+        
+        <a class="site-title" href="/fundamentos-de-estatistica/">
+          Fundamentos de Estatística
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/plan/">Plano</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/subjects/">Notas de Aula</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/exercises/">Exercícios</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fundamentos-de-estatistica/year-archive/">Posts</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Buscar</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Estatística Descritiva">
+    <meta itemprop="description" content="Exercícios sobre Estatística Descritiva.">
+    <meta itemprop="datePublished" content="2022-06-07T08:40:29-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Estatística Descritiva
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Nesta página</h4></header>
+              <ul class="toc__menu">
+<li><a href="#quest%C3%A3o-1">Questão 1</a></li>
+<li><a href="#quest%C3%A3o-2">Questão 2</a></li>
+<li><a href="#quest%C3%A3o-3">Questão 3</a></li>
+<li><a href="#quest%C3%A3o-4">Questão 4</a></li>
+<li><a href="#quest%C3%A3o-5">Questão 5</a></li>
+<li><a href="#quest%C3%A3o-6">Questão 6</a></li>
+<li><a href="#quest%C3%A3o-7">Questão 7</a></li>
+<li><a href="#quest%C3%A3o-8">Questão 8</a></li>
+<li><a href="#quest%C3%A3o-9">Questão 9</a></li>
+<li><a href="#quest%C3%A3o-10">Questão 10</a></li>
+<li><a href="#quest%C3%A3o-11">Questão 11</a></li>
+<li><a href="#quest%C3%A3o-12">Questão 12</a></li>
+<li><a href="#quest%C3%A3o-13">Questão 13</a></li>
+<li><a href="#quest%C3%A3o-14">Questão 14</a></li>
+<li><a href="#quest%C3%A3o-15">Questão 15</a></li>
+<li><a href="#quest%C3%A3o-16">Questão 16</a></li>
+<li><a href="#quest%C3%A3o-17">Questão 17</a></li>
+<li><a href="#quest%C3%A3o-18">Questão 18</a></li>
+<li><a href="#tabelas">Tabelas</a></li>
+<li><a href="#quest%C3%A3o-19">Questão 19</a></li>
+<li><a href="#quest%C3%A3o-20">Questão 20</a></li>
+<li><a href="#quest%C3%A3o-21">Questão 21</a></li>
+<li><a href="#respostas">Respostas</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>Exercícios sobre Estatística Descritiva.</p>
+
+<h2 id="questão-1">Questão 1</h2>
+
+<p>Classifique as variáveis (qualitativa nominal, qualitativa ordinal, quantitativa discreta, quantitativa contínua):</p>
+
+<ol>
+  <li>Vitamina (A, B1, B2, B6, B12).</li>
+  <li>Quantidade de caloria na batata frita.</li>
+  <li>Altura de uma pessoa.</li>
+  <li>Desfecho de uma doença (curado, não curado).</li>
+  <li>Classificação de uma lesão (lesão fatal; severa; moderada; pequena).</li>
+  <li>Grupo sanguíneo (A, B, AB, O).</li>
+  <li>Paridade (primeira gestação, segunda gestação, terceira …).</li>
+  <li>Estado geral de um paciente (bom, regular, ruim).</li>
+  <li>Número de nascidos vivos em certo hospital em junho/99.</li>
+  <li>Idade.</li>
+  <li>Concentração de flúor na água.</li>
+  <li>Atividade esportiva preferida.</li>
+  <li>Dinheiro disponível na conta.</li>
+  <li>Profissão.</li>
+</ol>
+
+<h2 id="questão-2">Questão 2</h2>
+
+<p>Qual a diferença entre uma variável quantitativa discreta para uma variável quantitativa contínua?</p>
+
+<h2 id="questão-3">Questão 3</h2>
+
+<p>Considere os dados abaixo referentes ao nível de glicose de 60 crianças:</p>
+
+<p>Dados brutos de nível de glicose:</p>
+
+<blockquote>
+  <p>56; 61; 57; 77; 62; 75; 63; 55; 64; 60; 60; 57; 61; 57; 67; 62; 69; 67; 68; 59; 65; 72; 65; 61; 68; 73; 65; 62; 75; 80; 66; 61; 69; 76; 72; 57; 75; 68; 83; 64; 69; 64; 66; 74; 65; 76; 65; 58; 65; 64; 65; 60; 65; 80; 66; 80; 68; 55; 66; 71.</p>
+</blockquote>
+
+<ul>
+  <li>Construa uma tabela (T1) de distribuição de frequências para esses dados.</li>
+  <li>Agrupando os dados em 5 classes, construa uma nova tabela (T2) de distribuição de frequências para esses dados.</li>
+  <li>Determine as frequências simples acumuladas (menor que) para cada classe em T2.</li>
+  <li>Determine as frequências relativas de cada classe em T2.</li>
+  <li>Determine as frequências relativas acumuladas (abaixo de) de cada classe em T2.</li>
+</ul>
+
+<h2 id="questão-4">Questão 4</h2>
+
+<p>Considere a Tabela referente ao anestésico A que se refere ao tempo, em horas, que 80 pacientes hospitalizados <em>dormiram</em> durante a administração do anestésico A.</p>
+
+<p>Tabela referente ao anestésico A:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tempo (horas)</th>
+      <th>Nº de pacientes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 ⊢ 4</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>4 ⊢ 8</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>8 ⊢ 12</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>12 ⊢ 16</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>16 ⊢ 20</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Encontre a frequência relativa de cada classe.</li>
+  <li>Determine a frequência acumulada (abaixo de) de cada classe.</li>
+  <li>Determine o ponto médio de cada classe.</li>
+  <li>Qual o percentual de pacientes que dormiram menos de 12 horas?</li>
+</ul>
+
+<p>Considere agora a seguinte Tabela referente ao anestésico B:</p>
+
+<p>Tabela referente ao anestésico B:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tempo (horas)</th>
+      <th>Nº de pacientes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 ⊢ 4</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>4 ⊢ 8</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>8 ⊢ 12</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>12 ⊢ 16</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>16 ⊢ 20</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Considerando que a cirurgia que será realizada no paciente 81 tem previsão para durar 5 horas, qual analgésico deve ser utilizado?</li>
+  <li>Por quê?
+(Observação: suponha que um analgésico pode ser aplicado mais de uma vez duplicando a duração dele.)</li>
+  <li>E se esse cirurgia tivesse previsão para durar 12 horas, qual analgésico deveria ser utilizado?</li>
+  <li>Por quê?</li>
+</ul>
+
+<h2 id="questão-5">Questão 5</h2>
+
+<p>Faça os histogramas de todas as tabelas de frequência dos exercícios anteriores.</p>
+
+<h2 id="questão-6">Questão 6</h2>
+
+<p>Calcule a média aritmética de todas as tabelas dos exercícios anteriores.</p>
+
+<h2 id="questão-7">Questão 7</h2>
+
+<p>Sabendo que, em 2015, a média aritmética das rendas de todos os brasileiros foi de R\$ 1113.00 e que a média aritmética das rendas de todos os estados-unidenses foi de R\$ 8050.00 em 2014.</p>
+
+<p>Somente com base nesses dados, é possível afirmar que os 50% mais pobres nos EUA e ganham mais do que os 50% mais pobres no Brasil?
+Justifique sua resposta.</p>
+
+<h2 id="questão-8">Questão 8</h2>
+
+<p>Na questão anterior, se sua resposta foi negativa, qual seria a medida de tendencia central que deveria ser utilizada?
+Por quê?</p>
+
+<h2 id="questão-9">Questão 9</h2>
+
+<p>Calcule a moda e a mediana da tabela da questão sobre crianças.</p>
+
+<h2 id="questão-10">Questão 10</h2>
+
+<p>Calcule a moda das tabelas da questão dos anestésicos.
+Existe alguma dificuldade para calcular a mediana das tabelas da questão dos anestésicos?
+Qual é essa dificuldade?
+Mesmo assim, é necessário calcular essa mediana, o que pode ser feito para superar essa dificuldade?</p>
+
+<h2 id="questão-11">Questão 11</h2>
+
+<p>Calcule a mediana baseado na solução encontrada no item anterior.</p>
+
+<h2 id="questão-12">Questão 12</h2>
+
+<p>O que significa uma variável amodal?
+E uma variável unimodal?</p>
+
+<h2 id="questão-13">Questão 13</h2>
+
+<p>Suponha que uma pesquisa perguntou para os moradores de uma cidade <em>para qual time de rugby você torce</em>, os resultados foram compilados e verificou-se que essa variável é amodal.
+O que pode se dizer sobre a quantidade de torcedores de cada time?</p>
+
+<h2 id="questão-14">Questão 14</h2>
+
+<p>Suponha que uma pesquisa perguntou para os moradores de uma cidade <em>para qual time de futebol você torce</em>, os resultados foram compilados e verificou-se que essa variável é unimodal.
+O que pode se dizer sobre a quantidade de torcedores de cada time?</p>
+
+<h2 id="questão-15">Questão 15</h2>
+
+<p>Suponha que uma pesquisa perguntou para os moradores de uma cidade <em>para qual time de basquete você torce</em>, os resultados foram compilados e verificou-se que essa variável é bimodal.
+O que pode se dizer sobre a quantidade de torcedores de cada time?</p>
+
+<h2 id="questão-16">Questão 16</h2>
+
+<p>Considere as suas respostas nas questões anteriores.
+Em quais situações você, ao assistir um jogo do seu time favorito, poderia se deparar com um estádio cheio com a torcida adversária?</p>
+
+<h2 id="questão-17">Questão 17</h2>
+
+<p>Suponha que sejam dados os seguintes números como resposta à uma enquete: 205, 6, 5, 5, 5, 2 e 1.
+Calcule a moda, a mediana e a média aritmética.
+Além disso, responda que medida de tendência central não deveria ser usada para descrever esse conjunto de escores?
+Por quê?</p>
+
+<h2 id="questão-18">Questão 18</h2>
+
+<p>Um químico recebeu 5 amostras de um material específico de 3 fornecedores diferentes.
+Na tentativa de encontrar o fornecedor que possui o material mais puro, ele fez um teste para medir a porcentagem de impurezas de cada amostra.
+O resultado foi pode ser encontrado na Tabela abaixo:</p>
+
+<p>Percentual de impurezas das amostras:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fornecedor</th>
+      <th>Percentual de Impureza</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fornecedor A</td>
+      <td>5.6; 6.1; 5.7; 7.7; 6.2</td>
+    </tr>
+    <tr>
+      <td>Fornecedor B</td>
+      <td>6.6; 8.0; 6.8; 5.5; 6.2</td>
+    </tr>
+    <tr>
+      <td>Fornecedor C</td>
+      <td>3.5; 6.0; 3.5; 8.0; 8.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Qual fornecedor ele deve escolher:</p>
+
+<ul>
+  <li>baseado na média aritmética?</li>
+  <li>baseado na moda?</li>
+  <li>baseado na mediana?</li>
+  <li>baseado na amplitude total?</li>
+</ul>
+
+<p>Baseando-se em todas as medidas de posição central calculadas, existe algum fornecedor que é objetivamente melhor do que os outros?</p>
+
+<p>Se não existe fornecedor objetivamente melhor, que critérios alem desses poderiam ser utilizados para escolher o fornecedor?</p>
+
+<h2 id="tabelas">Tabelas</h2>
+
+<p>Considere as seguintes tabelas nas resoluções dos exercícios:</p>
+
+<p>Dados brutos idade de alunos:</p>
+
+<blockquote>
+  <p>17, 18, 19, 19, 20, 23 17, 18, 19, 19, 20, 23 18, 18, 19, 19, 20, 25 18, 18, 19, 19, 22, 27 18, 18, 19, 20, 22, 30.</p>
+</blockquote>
+
+<p>Tabela referente ao tempo de permanência na biblioteca:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tempo (Min)</th>
+      <th>Nº Estudantes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50 ⊢ 70</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>70 ⊢ 90</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>90 ⊢ 110</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>110 ⊢ 130</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>130 ⊢ 150</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tabela referente ao número de quilômetros corridos sem parar antes e depois do treinamento:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quilômetros</th>
+      <th>Antes</th>
+      <th>Depois</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 ⊢ 4</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>4 ⊢ 8</td>
+      <td>15</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>8 ⊢ 12</td>
+      <td>24</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>12 ⊢ 16</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>16 ⊢ 20</td>
+      <td>13</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="questão-19">Questão 19</h2>
+
+<p>Referente a Tabela de idades pergunta-se:</p>
+
+<ul>
+  <li>Calcule a média, mediana e moda e interprete-os.</li>
+  <li>Calcule a variância e o desvio-padrão para os dados originais e interprete-os.</li>
+</ul>
+
+<p>Referente a Tabela de permanência pergunta-se:</p>
+
+<ul>
+  <li>Como fazer para calcular a média, moda e mediana desse conjunto de dados?
+Que simplificações devemos fazer para realizar esses cálculos?</li>
+  <li>Faça o mesmo para calcular o desvio padrão.</li>
+  <li>Se $x$ é a variável que mede o tempo de permanência na biblioteca e considerarmos que os alunos que ficam pouco tempo na biblioteca passam no máximo $\bar{x} - 2\sigma$ min nela.
+Quantos são esses alunos?</li>
+</ul>
+
+<h2 id="questão-20">Questão 20</h2>
+
+<p>Referente a Tabela da corrida pergunta-se:</p>
+
+<ul>
+  <li>Calcule a média antes do treinamento e depois do treinamento dos dados na tabela.</li>
+  <li>Calcule o desvio padrão antes do treinamento e depois do treinamento dos dados na tabela.</li>
+  <li>Utilizando os dados da média e do desvio padrão calculados, argumente a respeito se o treino melhorou o desempenho dos atletas ou não.</li>
+</ul>
+
+<h2 id="questão-21">Questão 21</h2>
+
+<p>Referente aos conceitos de média, moda, mediana e desvio-padrão:</p>
+
+<ul>
+  <li>Exemplifique um caso em que a mediana pode ser melhor do que a média, como medida de posição.</li>
+  <li>Exemplifique um caso em que a moda pode ser melhor do que a média, como medida de posição.</li>
+  <li>Faz sentido utilizar a média quando o desvio padrão é muito grande?</li>
+  <li>Supondo que um experimento foi realizado e os dados foram coletados na variável $x$.
+Supondo também, que apenas um valor observado é igual à $\bar{x} + 200\sigma$.
+Esse valor deve ser descartado?
+Justifique.</li>
+  <li>Sendo $x$ a variável analisada.
+É possível que mais de 10% dos valores observados sejam superiores à $\bar{x} + 3\sigma$?</li>
+</ul>
+
+<h2 id="respostas">Respostas</h2>
+
+<p>Um arquivo com algumas respostas pode ser encontrado <a href="/fundamentos-de-estatistica/assets/answers/e_02_respostas.ods">aqui</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2022-06-07T08:40:29-03:00">June 7, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=seuronao&text=Estat%C3%ADstica+Descritiva%20https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fexercises%2Festatistica-descritiva" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fexercises%2Festatistica-descritiva" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseuronao.github.io%2Ffundamentos-de-estatistica%2Fexercises%2Festatistica-descritiva" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Anterior</a>
+    
+    
+      <a href="/fundamentos-de-estatistica/exercises/probabilidade-variaveis-aleatorias" class="pagination--pager" title="Probabilidade e Variáveis Aleatórias
+">Próxima</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Pesquisar...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe no</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/fundamentos-de-estatistica/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 SeuRonão. Desenvolvido com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/fundamentos-de-estatistica/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr.min.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-store.js"></script>
+<script src="/fundamentos-de-estatistica/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
